@@ -31,11 +31,8 @@ public class Main{
                     q.add(j);
                     ins[j]--;
                     i++;
-                    while(!q.isEmpty()){
-                        int num = q.poll();
-                        while(!outs[num].isEmpty()){
-                            ins[outs[num].remove(0)]--;
-                        }
+                    while(!outs[j].isEmpty()){
+                        ins[outs[j].remove(0)]--;
                     }
                     break;
                 }
