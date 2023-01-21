@@ -10,7 +10,6 @@ public class Main {
         String[] input = br.readLine().split(" ");
         int N = Integer.parseInt(input[0]);
         int K = Integer.parseInt(input[1]);
-
         if(N>=K){
             count = N-K;
             System.out.println(count);
@@ -21,7 +20,6 @@ public class Main {
         boolean [] visited = new boolean[100001];
         while (!qp.isEmpty()){
             int[] poll = qp.poll();
-
             if(poll[1] > count || poll[0]<0 || poll[0]>100000){
                 continue;
             }
@@ -39,5 +37,4 @@ public class Main {
         }
         System.out.println(count);
     }
-
 }
