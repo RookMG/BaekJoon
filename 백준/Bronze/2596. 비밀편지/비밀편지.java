@@ -23,25 +23,25 @@ public class Main{
 		int n = Integer.parseInt(br.readLine());
 		String input = br.readLine();
 		for(int i = 0;i<n;i++) {
-			String result = decode(input.substring(i*6, (i+1)*6));
-			if("ABCDEFGH".indexOf(result)>=0) {
-				sb.append(result);
-			}else {
+			char result = decode(input.substring(i*6, (i+1)*6));
+			if(result == '0') {
 				System.out.println(i+1);
 				return;
+			}else {
+				sb.append(result);
 			}
 		}
 		System.out.println(sb);
 	}
-	static String decode(String code) {
+	static char decode(String code) {
 		char[] arr = code.toCharArray();
 		for(int i=0;i<8;i++) {
 			int count = 0;
 			for(int j=0;j<6;j++) {
 				if(arr[j]==codeTable[i][j]) {count++;}
 			}
-			if(count>=5) {return Character.toString((char)('A'+i));}
+			if(count>=5) {return (char)('A'+i);}
 		}
-		return "0";
+		return '0';
 	}
 }
