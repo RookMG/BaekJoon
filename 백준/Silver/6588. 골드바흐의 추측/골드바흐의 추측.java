@@ -25,7 +25,7 @@ public class Main {
         loop: while(true) {
 	        int a = Integer.parseInt(br.readLine()),count = 0;
 	        if(a==0) {break;}
-	        for(int i=1;i<len;i++) {
+	        for(int i=1;i<len/2+1;i++) {
 	        	int p = list.get(i);
 	        	if(primes[a-p]) {
 	        		sb.append(String.format("%d = %d + %d\n", a,p,a-p));
