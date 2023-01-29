@@ -109,6 +109,7 @@
 |2605. 줄 세우기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2605.%E2%80%85%EC%A4%84%E2%80%85%EC%84%B8%EC%9A%B0%EA%B8%B0/%EC%A4%84%E2%80%85%EC%84%B8%EC%9A%B0%EA%B8%B0.java)|
 |2609. 최대공약수와 최소공배수|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2609.%E2%80%85%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.java)|
 |26209. Intercepting Information|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26209.%E2%80%85Intercepting%E2%80%85Information/Intercepting%E2%80%85Information.py)|
+|26489. Gum Gum for Jay Jay|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26489.%E2%80%85Gum%E2%80%85Gum%E2%80%85for%E2%80%85Jay%E2%80%85Jay/Gum%E2%80%85Gum%E2%80%85for%E2%80%85Jay%E2%80%85Jay.py)|
 |26545. Mathematics|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26545.%E2%80%85Mathematics/Mathematics.py)|
 |26574. Copier|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26574.%E2%80%85Copier/Copier.py)|
 |26575. Pups|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26575.%E2%80%85Pups/Pups.py)|
