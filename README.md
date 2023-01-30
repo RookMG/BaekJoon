@@ -155,6 +155,7 @@
 |8370. Plane|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8370.%E2%80%85Plane/Plane.gs)|
 |8393. 합|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8393.%E2%80%85%ED%95%A9/%ED%95%A9.py)|
 |8437. Julka|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8437.%E2%80%85Julka/Julka.py)|
+|8545. Zadanie próbne|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8545.%E2%80%85Zadanie%E2%80%85pr%C3%B3bne/Zadanie%E2%80%85pr%C3%B3bne.py)|
 |8958. OX퀴즈|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8958.%E2%80%85OX%ED%80%B4%EC%A6%88/README.md)|
 |9086. 문자열|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9086.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%AC%B8%EC%9E%90%EC%97%B4.java)|
 ### 🚀 Diamond
