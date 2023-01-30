@@ -177,6 +177,7 @@
 |5597. 과제 안 내신 분．．？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/5597.%E2%80%85%EA%B3%BC%EC%A0%9C%E2%80%85%EC%95%88%E2%80%85%EB%82%B4%EC%8B%A0%E2%80%85%EB%B6%84%EF%BC%8E%EF%BC%8E%EF%BC%9F/%EA%B3%BC%EC%A0%9C%E2%80%85%EC%95%88%E2%80%85%EB%82%B4%EC%8B%A0%E2%80%85%EB%B6%84%EF%BC%8E%EF%BC%8E%EF%BC%9F.py)|
 |5622. 다이얼|[링크](./%EB%B0%B1%EC%A4%80/Bronze/5622.%E2%80%85%EB%8B%A4%EC%9D%B4%EC%96%BC/%EB%8B%A4%EC%9D%B4%EC%96%BC.java)|
 |6359. 만취한 상범|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6359.%E2%80%85%EB%A7%8C%EC%B7%A8%ED%95%9C%E2%80%85%EC%83%81%EB%B2%94/%EB%A7%8C%EC%B7%A8%ED%95%9C%E2%80%85%EC%83%81%EB%B2%94.java)|
+|6749. Next in line|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6749.%E2%80%85Next%E2%80%85in%E2%80%85line/Next%E2%80%85in%E2%80%85line.gs)|
 |6840. Who is in the middle？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6840.%E2%80%85Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F/Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F.py)|
 |8370. Plane|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8370.%E2%80%85Plane/Plane.gs)|
 |8393. 합|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8393.%E2%80%85%ED%95%A9/%ED%95%A9.py)|
