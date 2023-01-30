@@ -161,6 +161,7 @@
 |8871. Zadanie próbne 2|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8871.%E2%80%85Zadanie%E2%80%85pr%C3%B3bne%E2%80%852/README.md)|
 |8958. OX퀴즈|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8958.%E2%80%85OX%ED%80%B4%EC%A6%88/README.md)|
 |9086. 문자열|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9086.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%AC%B8%EC%9E%90%EC%97%B4.java)|
+|9654. 나부 함대 데이터|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9654.%E2%80%85%EB%82%98%EB%B6%80%E2%80%85%ED%95%A8%EB%8C%80%E2%80%85%EB%8D%B0%EC%9D%B4%ED%84%B0/%EB%82%98%EB%B6%80%E2%80%85%ED%95%A8%EB%8C%80%E2%80%85%EB%8D%B0%EC%9D%B4%ED%84%B0.txt)|
 ### 🚀 Diamond
 | 문제번호 | 링크 |
 | ----- | ----- |
