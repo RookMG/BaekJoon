@@ -71,6 +71,7 @@
 |18301. Rats|[링크](./%EB%B0%B1%EC%A4%80/Bronze/18301.%E2%80%85Rats/Rats.py)|
 |1934. 최소공배수|[링크](./%EB%B0%B1%EC%A4%80/Bronze/1934.%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.py)|
 |20254. Site Score|[링크](./%EB%B0%B1%EC%A4%80/Bronze/20254.%E2%80%85Site%E2%80%85Score/Site%E2%80%85Score.gs)|
+|20492. 세금|[링크](./%EB%B0%B1%EC%A4%80/Bronze/20492.%E2%80%85%EC%84%B8%EA%B8%88/%EC%84%B8%EA%B8%88.py)|
 |21300. Bottle Return|[링크](./%EB%B0%B1%EC%A4%80/Bronze/21300.%E2%80%85Bottle%E2%80%85Return/Bottle%E2%80%85Return.py)|
 |21598. SciComLove|[링크](./%EB%B0%B1%EC%A4%80/Bronze/21598.%E2%80%85SciComLove/SciComLove.py)|
 |2163. 초콜릿 자르기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2163.%E2%80%85%EC%B4%88%EC%BD%9C%EB%A6%BF%E2%80%85%EC%9E%90%EB%A5%B4%EA%B8%B0/%EC%B4%88%EC%BD%9C%EB%A6%BF%E2%80%85%EC%9E%90%EB%A5%B4%EA%B8%B0.py)|
