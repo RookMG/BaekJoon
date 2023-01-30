@@ -94,6 +94,7 @@
 |2338. 긴자리 계산|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2338.%E2%80%85%EA%B8%B4%EC%9E%90%EB%A6%AC%E2%80%85%EA%B3%84%EC%82%B0/%EA%B8%B4%EC%9E%90%EB%A6%AC%E2%80%85%EA%B3%84%EC%82%B0.py)|
 |2372. Livestock Count|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2372.%E2%80%85Livestock%E2%80%85Count/Livestock%E2%80%85Count.ada)|
 |2377. Pottery|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2377.%E2%80%85Pottery/Pottery.bas)|
+|2393. Rook|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2393.%E2%80%85Rook/Rook.cob)|
 |24078. 余り （Remainder）|[링크](./%EB%B0%B1%EC%A4%80/Bronze/24078.%E2%80%85%E4%BD%99%E3%82%8A%E2%80%85%EF%BC%88Remainder%EF%BC%89/%E4%BD%99%E3%82%8A%E2%80%85%EF%BC%88Remainder%EF%BC%89.py)|
 |24082. 立方体 （Cube）|[링크](./%EB%B0%B1%EC%A4%80/Bronze/24082.%E2%80%85%E7%AB%8B%E6%96%B9%E4%BD%93%E2%80%85%EF%BC%88Cube%EF%BC%89/%E7%AB%8B%E6%96%B9%E4%BD%93%E2%80%85%EF%BC%88Cube%EF%BC%89.py)|
 |24086. 身長 （Height）|[링크](./%EB%B0%B1%EC%A4%80/Bronze/24086.%E2%80%85%E8%BA%AB%E9%95%B7%E2%80%85%EF%BC%88Height%EF%BC%89/%E8%BA%AB%E9%95%B7%E2%80%85%EF%BC%88Height%EF%BC%89.gs)|
