@@ -114,6 +114,7 @@
 |2588. 곱셈|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2588.%E2%80%85%EA%B3%B1%EC%85%88/%EA%B3%B1%EC%85%88.py)|
 |2596. 비밀편지|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2596.%E2%80%85%EB%B9%84%EB%B0%80%ED%8E%B8%EC%A7%80/README.md)|
 |2605. 줄 세우기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2605.%E2%80%85%EC%A4%84%E2%80%85%EC%84%B8%EC%9A%B0%EA%B8%B0/%EC%A4%84%E2%80%85%EC%84%B8%EC%9A%B0%EA%B8%B0.java)|
+|26082. WARBOY|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26082.%E2%80%85WARBOY/WARBOY.gs)|
 |2609. 최대공약수와 최소공배수|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2609.%E2%80%85%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.java)|
 |26209. Intercepting Information|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26209.%E2%80%85Intercepting%E2%80%85Information/Intercepting%E2%80%85Information.py)|
 |26307. Correct|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26307.%E2%80%85Correct/Correct.py)|
