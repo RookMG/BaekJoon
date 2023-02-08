@@ -88,7 +88,7 @@
 |22193. Multiply|[링크](./%EB%B0%B1%EC%A4%80/Bronze/22193.%E2%80%85Multiply/Multiply.py)|
 |2231. 분해합|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2231.%E2%80%85%EB%B6%84%ED%95%B4%ED%95%A9/%EB%B6%84%ED%95%B4%ED%95%A9.java)|
 |2292. 벌집|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2292.%E2%80%85%EB%B2%8C%EC%A7%91/%EB%B2%8C%EC%A7%91.py)|
-|2309. 일곱 난쟁이|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2309.%E2%80%85%EC%9D%BC%EA%B3%B1%E2%80%85%EB%82%9C%EC%9F%81%EC%9D%B4/README.md)|
+|2309. 일곱 난쟁이|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2309.%E2%80%85%EC%9D%BC%EA%B3%B1%E2%80%85%EB%82%9C%EC%9F%81%EC%9D%B4/%EC%9D%BC%EA%B3%B1%E2%80%85%EB%82%9C%EC%9F%81%EC%9D%B4.py)|
 |23234. The World Responds|[링크](./%EB%B0%B1%EC%A4%80/Bronze/23234.%E2%80%85The%E2%80%85World%E2%80%85Responds/The%E2%80%85World%E2%80%85Responds.py)|
 |23235. The Fastest Sorting Algorithm In The World|[링크](./%EB%B0%B1%EC%A4%80/Bronze/23235.%E2%80%85The%E2%80%85Fastest%E2%80%85Sorting%E2%80%85Algorithm%E2%80%85In%E2%80%85The%E2%80%85World/The%E2%80%85Fastest%E2%80%85Sorting%E2%80%85Algorithm%E2%80%85In%E2%80%85The%E2%80%85World.py)|
 |23320. 홍익 절대평가|[링크](./%EB%B0%B1%EC%A4%80/Bronze/23320.%E2%80%85%ED%99%8D%EC%9D%B5%E2%80%85%EC%A0%88%EB%8C%80%ED%8F%89%EA%B0%80/%ED%99%8D%EC%9D%B5%E2%80%85%EC%A0%88%EB%8C%80%ED%8F%89%EA%B0%80.py)|
