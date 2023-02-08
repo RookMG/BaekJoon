@@ -1,22 +1,23 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
-
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
+    static StringBuilder sb = new StringBuilder();
     static int R, C;
-    static int[][] coords;
+    static int[][] coords, origin;
     static int[][] delta = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
     static char[][] map;
     public static void main(String[] args) throws Exception{
         st = new StringTokenizer(br.readLine());
         R = Integer.parseInt(st.nextToken()); C = Integer.parseInt(st.nextToken());
-        coords = new int[2][2]; // redR, redC, blueR, blueC, holeR, holeC
+        coords = new int[2][2]; // redR, redC, blueR, blueC
         map = new char[R][];
+        HashSet<String> visit = new HashSet<>();
         for(int i=0;i<R;i++) {
         	map[i] = br.readLine().toCharArray();
         	for(int j=0;j<C;j++) {
@@ -71,7 +72,10 @@ public class Main{
         				System.out.println(1);
         				return;
         			}
-        			if(!(rOut||bOut)&&!((nCoords[0][0]==coords[0][0])&&(nCoords[0][1]==coords[0][1])&&(nCoords[1][0]==coords[1][0])&&(nCoords[1][1]==coords[1][1]))) {
+        			sb.setLength(0);
+        			sb.append(nCoords[0][0]).append(nCoords[0][1]).append(nCoords[1][0]).append(nCoords[1][1]);
+        			if(!(rOut||bOut)&&!visit.contains(sb.toString())) {
+        				visit.add(sb.toString());
         				nq.add(nCoords);
         			}
         		}
