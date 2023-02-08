@@ -1,11 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
-
 public class Main{
-
-    public void solution() throws Exception {
+    public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -22,8 +19,5 @@ public class Main{
             sb.append(a==1?arr[b-1]:(arr[b-1]-arr[a-2])).append("\n");
         }
         System.out.print(sb);
-    }
-    public static void main(String[] args) throws Exception{
-        new Main().solution();
     }
 }
