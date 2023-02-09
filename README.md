@@ -186,6 +186,7 @@
 |6359. 만취한 상범|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6359.%E2%80%85%EB%A7%8C%EC%B7%A8%ED%95%9C%E2%80%85%EC%83%81%EB%B2%94/%EB%A7%8C%EC%B7%A8%ED%95%9C%E2%80%85%EC%83%81%EB%B2%94.java)|
 |6749. Next in line|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6749.%E2%80%85Next%E2%80%85in%E2%80%85line/Next%E2%80%85in%E2%80%85line.gs)|
 |6840. Who is in the middle？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6840.%E2%80%85Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F/Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F.py)|
+|6916. 0123456789|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6916.%E2%80%850123456789/0123456789.java)|
 |7891. Can you add this？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/7891.%E2%80%85Can%E2%80%85you%E2%80%85add%E2%80%85this%EF%BC%9F/Can%E2%80%85you%E2%80%85add%E2%80%85this%EF%BC%9F.py)|
 |8370. Plane|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8370.%E2%80%85Plane/Plane.gs)|
 |8393. 합|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8393.%E2%80%85%ED%95%A9/%ED%95%A9.py)|
