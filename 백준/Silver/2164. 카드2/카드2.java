@@ -1,24 +1,15 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-
+import java.util.StringTokenizer;
 public class Main{
-
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
     public void solution() throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        int n = Integer.parseInt(br.readLine());
-        LinkedList<Integer> ll = new LinkedList<>();
-        for(int i=1;i<=n;i++){
-            ll.offer(i);
-        }
-        for(int i=0;i<2*n-3;i++){
-            int now = ll.pop();
-            if(i%2==1){
-                ll.offer(now);
-            }
-        }
-        System.out.println(ll.pop());
+        st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken()), answer = 1;
+        for (int i = 2; i<=n; i++)
+            answer = (answer + 1) % i + 1;
+        System.out.println(answer==1?n:answer-1);
     }
     public static void main(String[] args) throws Exception{
         new Main().solution();
