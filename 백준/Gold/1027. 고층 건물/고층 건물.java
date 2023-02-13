@@ -6,19 +6,18 @@ import java.util.StringTokenizer;
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    static int[] lView, rView, answer;
+    static int[] height, answer;
     public static void main(String[] args) throws Exception{
-        int n = Integer.parseInt(br.readLine());
-        if(n==1) {br.readLine(); System.out.println(0); return;}
-        lView = new int[n]; rView = new int[n]; answer = new int[n];
+        int n = Integer.parseInt(br.readLine()), max = 0;
+        height = new int[n]; answer = new int[n];
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {
-        	lView[i] = rView[n-1-i] = Integer.parseInt(st.nextToken());
+        	height[i] = Integer.parseInt(st.nextToken());
         }
         for(int i=0;i<n-1;i++) {
         	double lSlope = -1000000000, rSlope = -1000000000;
         	for(int j=i+1;j<n;j++) {
-        		double lNow = 1.0*(lView[j]-lView[i])/(j-i), rNow = 1.0*(rView[j]-rView[i])/(j-i);
+        		double lNow = 1.0*(height[j]-height[i])/(j-i), rNow = 1.0*(height[n-1-j]-height[n-1-i])/(j-i);
         		if(lNow>lSlope) {
         			lSlope = lNow;
         			answer[i]++;
@@ -29,7 +28,9 @@ public class Main{
         		}
         	}
         }
-        Arrays.sort(answer);
-        System.out.println(answer[n-1]);
+        for(int i=0;i<n;i++) {
+        	max = Math.max(max, answer[i]);
+        }
+        System.out.println(max);
     }
 }
