@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.StringTokenizer;
 
 public class Main{
@@ -9,18 +10,18 @@ public class Main{
     static StringTokenizer st;
     public static void main(String[] args) throws Exception{
         int n = Integer.parseInt(br.readLine());
-        Stack<int[]> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         int[] height = new int[n], answer = new int[n];
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {
         	height[i] = Integer.parseInt(st.nextToken());
         }
-        stack.add(new int[] {height[n-1],n-1});
+        stack.offerFirst(n-1);
         for(int i=n-2;i>=0;i--) {
-        	while(!stack.isEmpty()&&stack.peek()[0]<height[i]) {
-        		answer[stack.pop()[1]] = i+1;
+        	while(!stack.isEmpty()&&height[stack.peek()]<height[i]) {
+        		answer[stack.pop()] = i+1;
         	}
-        	stack.add(new int[] {height[i],i});
+        	stack.offerFirst(i);
         }
         for(int i=0;i<n;i++) {
         	sb.append(answer[i]).append(" ");
