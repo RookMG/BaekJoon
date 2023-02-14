@@ -24,18 +24,20 @@ public class Main{
     		answer = Math.max(answer, point);
     		return;
     	}
+    	boolean start = false;
 		for(int j=0;j<4;j++) {
 			int now = position[j], next = now+moves[count];
-			if(now == 32) {
+			if(now == 32 || (now==0&&start)) {
 				continue;
-			}else if(now>0&&now<21&&now%5==0) {
+			}else if(now==0) {
+				start = true;
+			}else if(now<21&&now%5==0) {
 				next = blue[now/5-1][moves[count]-1];
 			}else if(now<20&&next>20) {
 				next = 32;
 			}else if(now>20&&now<32){
 				next = midway[now-21][moves[count]];
 			}
-			
 			end = (next == 32);
 	    	if(end||!visit[next]) {
 				visit[next] = true;
