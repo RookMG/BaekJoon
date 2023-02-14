@@ -3,7 +3,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
-
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
@@ -16,8 +15,7 @@ public class Main{
         for(int i=0;i<n;i++) {
         	height[i] = Integer.parseInt(st.nextToken());
         }
-        stack.offerFirst(n-1);
-        for(int i=n-2;i>=0;i--) {
+        for(int i=n-1;i>=0;i--) {
         	while(!stack.isEmpty()&&height[stack.peek()]<height[i]) {
         		answer[stack.pop()] = i+1;
         	}
