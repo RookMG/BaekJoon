@@ -5,10 +5,11 @@ import java.util.StringTokenizer;
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    static int start = 4, answer = 0;
+    static int answer = 0;
     static int[] moves = new int[10], position = {0,0,0,0};
-    static int[][] midway = {{13,22,23,29,30,31},{16,23,29,30,31,20},{19,29,30,31,20,32},{22,25,29,30,31,20},{24,29,30,31,20,32},{28,27,28,29,30,31},{27,28,29,30,31,20},{26,29,30,31,20,32},{25,30,31,20,32,32},{30,31,20,32,32,32},{35,20,32,32,32,32}};
-    static int[][] blue = {{21,22,23,29,30},{24,25,29,30,31},{26,27,28,29,30},{32,32,32,32,32}};
+    static int[][] 	midway = {{13,22,23,29,30,31},{16,23,29,30,31,20},{19,29,30,31,20,32},{22,25,29,30,31,20},{24,29,30,31,20,32},{28,27,28,29,30,31},{27,28,29,30,31,20},{26,29,30,31,20,32},{25,30,31,20,32,32},{30,31,20,32,32,32},{35,20,32,32,32,32}}
+    				,blue = {{21,22,23,29,30},{24,25,29,30,31},{26,27,28,29,30},{32,32,32,32,32}};
+    static boolean end;
     static boolean[] visit = new boolean[33];
     public static void main(String[] args) throws Exception{
         st = new StringTokenizer(br.readLine());
@@ -34,7 +35,17 @@ public class Main{
 			}else if(now>20&&now<32){
 				next = midway[now-21][moves[count]];
 			}
-			goNext(now, next, j, count, point);
+			
+			end = (next == 32);
+	    	if(end||!visit[next]) {
+				visit[next] = true;
+				visit[now] = false;
+				position[j] = next;
+				find(count+1,point+calcPoint(next));
+				visit[next] = false;
+				visit[now] = true;
+				position[j] = now;
+	    	}
 		}
     }
     static int calcPoint(int next) {
@@ -45,17 +56,5 @@ public class Main{
 		}else {
 			return midway[next-21][0];
 		}
-    }
-    static void goNext(int now, int next, int j, int count, int point) {
-    	boolean end = (next == 32);
-    	if(end||!visit[next]) {
-			visit[next] = true;
-			visit[now] = false;
-			position[j] = next;
-			find(count+1,point+calcPoint(next));
-			visit[next] = false;
-			visit[now] = true;
-			position[j] = now;
-    	}
     }
 }
