@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
@@ -36,7 +35,7 @@ public class Main{
         		nr += delta[ndir][0]*k; nc += delta[ndir][1]*k;
         		answer[nr][nc] = map[r][c];
     			r += delta[dir][0]; c += delta[dir][1];
-        		if(r==flag[dir][0]&&c==flag[dir][1]) {dir = (dir+1)%4;}
+        		if(flag[dir][dir%2]==(dir%2==0?r:c)) {dir = (dir+1)%4;}
         	}
         	length -= 8;
         }
