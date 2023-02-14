@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main{
@@ -9,7 +8,8 @@ public class Main{
     static int start = 4, answer = 0;
     static int[] moves = new int[10], position = {0,0,0,0};
     static int[][] midway = {{13,22,23,29,30,31},{16,23,29,30,31,20},{19,29,30,31,20,32},{22,25,29,30,31,20},{24,29,30,31,20,32},{28,27,28,29,30,31},{27,28,29,30,31,20},{26,29,30,31,20,32},{25,30,31,20,32,32},{30,31,20,32,32,32},{35,20,32,32,32,32}};
-    static boolean[] visit = new boolean[32];
+    static int[][] blue = {{21,22,23,29,30},{24,25,29,30,31},{26,27,28,29,30},{32,32,32,32,32}};
+    static boolean[] visit = new boolean[33];
     public static void main(String[] args) throws Exception{
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<10;i++) {
@@ -27,28 +27,14 @@ public class Main{
 			int now = position[j], next = now+moves[count];
 			if(now == 32) {
 				continue;
-			}
-			if(now==5) {
-				next = new int[] {5,21,22,23,29,30}[moves[count]];
-				goNext(now, next, j, count, point);
-			}else if(now==10) {
-				next = new int[] {10,24,25,29,30,31}[moves[count]];
-				goNext(now, next, j, count, point);
-			}else if(now==15) {
-				next = new int[] {15,26,27,28,29,30}[moves[count]];
-				goNext(now, next, j, count, point);
-			}else if(now == 20) {
+			}else if(now>0&&now<21&&now%5==0) {
+				next = blue[now/5-1][moves[count]-1];
+			}else if(now<20&&next>20) {
 				next = 32;
-				goNext(now, next, j, count, point);
-			}else if(now == 0) {
-				goNext(now, next, j, count, point);
-			}else if(position[j]<20) {
-				if(next>20) next = 32;
-				goNext(now, next, j, count, point);
-			}else {
+			}else if(now>20&&now<32){
 				next = midway[now-21][moves[count]];
-				goNext(now, next, j, count, point);
 			}
+			goNext(now, next, j, count, point);
 		}
     }
     static int calcPoint(int next) {
@@ -61,13 +47,8 @@ public class Main{
 		}
     }
     static void goNext(int now, int next, int j, int count, int point) {
-    	if(next == 32) {
-			position[j] = 32;
-			visit[now] = false;
-			find(count+1,point);
-			visit[now] = true;
-			position[j] = now;
-		}else if(!visit[next]) {
+    	boolean end = (next == 32);
+    	if(end||!visit[next]) {
 			visit[next] = true;
 			visit[now] = false;
 			position[j] = next;
@@ -75,6 +56,6 @@ public class Main{
 			visit[next] = false;
 			visit[now] = true;
 			position[j] = now;
-		}
+    	}
     }
 }
