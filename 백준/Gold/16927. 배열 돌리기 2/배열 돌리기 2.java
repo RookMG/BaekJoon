@@ -19,21 +19,26 @@ public class Main{
         		map[i][j] = Integer.parseInt(st.nextToken());
         	}
         }
-        int loops = Math.min(N, M)/2;
+        int loops = Math.min(N, M)/2, length = 2*(N+M-2);
         for(int i=0;i<loops;i++) {
-        	int length = 2*(N+M-2-4*i);
         	int[][] flag = {{N-1-i,i},{N-1-i,M-1-i},{i,M-1-i},{i,i}};
         	int r = i, c = i, dir = 0;
         	for(int j=0;j<length;j++) {
-        		int nr = r, nc = c, ndir = dir;
-        		for(int k=0;k<R%length;k++) {
-        			nr += delta[ndir][0]; nc += delta[ndir][1];
-        			if(nr==flag[ndir][0]&&nc==flag[ndir][1]) {ndir = (ndir+1)%4;}
+        		int nr = r, nc = c, ndir = dir, k=R%length;
+        		while(true) {
+        			int skip = Math.abs(flag[ndir][ndir%2]-(ndir%2==0?nr:nc));
+	        		if(skip<k) {
+	        			k-=skip;
+	        			nr = flag[ndir][0]; nc = flag[ndir][1];
+	        			ndir = (ndir+1)%4;
+	        		}else break;
         		}
+        		nr += delta[ndir][0]*k; nc += delta[ndir][1]*k;
         		answer[nr][nc] = map[r][c];
     			r += delta[dir][0]; c += delta[dir][1];
         		if(r==flag[dir][0]&&c==flag[dir][1]) {dir = (dir+1)%4;}
         	}
+        	length -= 8;
         }
         for(int i=0;i<N;i++) {
         	for(int j=0;j<M;j++) {
