@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main{
@@ -15,16 +14,13 @@ public class Main{
         	height[i] = Integer.parseInt(st.nextToken());
         }
         for(int i=0;i<n-1;i++) {
-        	double lSlope = -1000000000, rSlope = -1000000000;
+        	double slope = -1000000000;
         	for(int j=i+1;j<n;j++) {
-        		double lNow = 1.0*(height[j]-height[i])/(j-i), rNow = 1.0*(height[n-1-j]-height[n-1-i])/(j-i);
-        		if(lNow>lSlope) {
-        			lSlope = lNow;
+        		double now = 1.0*(height[j]-height[i])/(j-i);
+        		if(now>slope) {
+        			slope = now;
         			answer[i]++;
-        		}
-        		if(rNow>rSlope) {
-        			rSlope = rNow;
-        			answer[n-1-i]++;
+        			answer[j]++;
         		}
         	}
         }
