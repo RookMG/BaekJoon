@@ -8,38 +8,37 @@ public class Main{
     static StringTokenizer st;
     static int[][] delta = {{1,0},{0,1},{-1,0},{0,-1}};
     static int N, M, R;
-    static int[][] map, answer, loopInfo;
+    static int[][] map, answer;
     public static void main(String[] args) throws Exception{
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken()); M = Integer.parseInt(st.nextToken()); R = Integer.parseInt(st.nextToken());
-        map = new int[N][M]; answer = new int[N][M]; loopInfo = new int[N][M];
+        map = new int[N][M]; answer = new int[N][M];
         for(int i=0;i<N;i++) {
             st = new StringTokenizer(br.readLine());
         	for(int j=0;j<M;j++) {
         		map[i][j] = Integer.parseInt(st.nextToken());
         	}
         }
-        int loops = Math.min(N, M)/2;
+        int loops = Math.min(N, M)/2, length = 2*(N+M-2);
         for(int i=0;i<loops;i++) {
-        	int length = 2*(N+M-2-4*i);
         	int[][] flag = {{N-1-i,i},{N-1-i,M-1-i},{i,M-1-i},{i,i}};
-        	int r = i, c = i;
-        	for(int j=0;j<4;) {
-        		loopInfo[r][c] = j;
-        		r+=delta[j][0]; c+=delta[j][1];
-        		if(r==flag[j][0]&&c==flag[j][1]) {j++;}
-        	}
-        	r=i;c=i;
+        	int r = i, c = i, dir = 0;
         	for(int j=0;j<length;j++) {
-        		int nr = r, nc = c, tmpr=r, tmpc=c;
-        		for(int k=0;k<R%length;k++) {
-        			tmpr = nr; tmpc = nc;
-        			nr = tmpr+delta[loopInfo[tmpr][tmpc]][0]; nc = tmpc+delta[loopInfo[tmpr][tmpc]][1];
+        		int nr = r, nc = c, ndir = dir, k=R%length;
+        		while(true) {
+        			int skip = Math.abs(flag[ndir][ndir%2]-(ndir%2==0?nr:nc));
+	        		if(skip<k) {
+	        			k-=skip;
+	        			nr = flag[ndir][0]; nc = flag[ndir][1];
+	        			ndir = (ndir+1)%4;
+	        		}else break;
         		}
+        		nr += delta[ndir][0]*k; nc += delta[ndir][1]*k;
         		answer[nr][nc] = map[r][c];
-        		nr = r+delta[loopInfo[r][c]][0]; nc = c+delta[loopInfo[r][c]][1];
-        		r = nr; c = nc;
+    			r += delta[dir][0]; c += delta[dir][1];
+        		if(r==flag[dir][0]&&c==flag[dir][1]) {dir = (dir+1)%4;}
         	}
+        	length -= 8;
         }
         for(int i=0;i<N;i++) {
         	for(int j=0;j<M;j++) {
