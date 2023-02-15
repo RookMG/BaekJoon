@@ -19,7 +19,6 @@ public class Main{
         		}
         	}
         }
-        
         visit = new boolean[left];
         System.out.println(new char[] {'L','D','W'}[1+solve(left)]);
     }
@@ -28,25 +27,21 @@ public class Main{
     		return 0;
     	}
     	int result = -1;
-    	
-    	//backtracking
     	for(int i=0;i<left;i++) {
     		if(!visit[i]) {
     			int r = zeros[i][0], c = zeros[i][1];
-    			visit[i] = true;
     			map[r][c] = 2-turns%2;
     			if(checkWin()) {
-        			visit[i] = false;
         			map[r][c] = 0;
     				return 1;
     			}else {
+        			visit[i] = true;
     				result = Math.max(result, -1*solve(turns-1));
         			visit[i] = false;
         			map[r][c] = 0;
     			}
     		}
     	}
-    	
     	return result;
     }
     static boolean checkWin() {
