@@ -20,7 +20,7 @@ public class Main{
         	}
         }
         visit = new boolean[left];
-        System.out.println(new char[] {'L','D','W'}[1+solve(left)]);
+        System.out.println(left<8?new char[] {'L','D','W'}[1+solve(left)]:'D');
     }
     static int solve(int turns) {
     	if(turns==0) {
