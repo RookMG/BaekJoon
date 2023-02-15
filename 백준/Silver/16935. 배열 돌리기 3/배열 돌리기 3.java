@@ -10,10 +10,10 @@ public class Main{
     static StringTokenizer st;
     static int[][] map;
     static final int[] inverse = {0,1,2,4,3,6,5};
-    static Deque<Integer> command = new ArrayDeque<>();
     public static void main(String[] args) throws Exception{
         st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken()), R = Integer.parseInt(st.nextToken());
+        int[] command = new int[R];
         map = new int[N][M];
         for(int i=0;i<N;i++) {
         	st = new StringTokenizer(br.readLine());
@@ -22,11 +22,10 @@ public class Main{
         	}
         }
         st = new StringTokenizer(br.readLine());
-        for(int i=0;i<R;i++) command.offer(Integer.parseInt(st.nextToken()));
-        while(!command.isEmpty()) {
-        	int now = command.pollFirst();
-        	if(!command.isEmpty()&&inverse[now]==command.peekFirst()) {command.poll();continue;}
-        	flip(now);
+        for(int i=0;i<R;i++) command[i]=Integer.parseInt(st.nextToken());
+        for(int i=0;i<R;i++) {
+        	if(i<R-1&&inverse[command[i]]==command[i+1]) {i++;continue;}
+        	flip(command[i]);
         }
         for(int i=0;i<map.length;i++) {
         	for(int j=0;j<map[0].length;j++) {
