@@ -26,23 +26,25 @@ public class Main{
                 rotateInfo[i][j] = Integer.parseInt(st.nextToken())-1;
             }
             rotateInfo[i][2] = Integer.parseInt(st.nextToken());
+            rotateOrder[i]=i;
         }
-        find(0);
+        do{ updateAnswer(); }while(np());
         System.out.print(answer);
     }
-    static void find(int t) {
-        if(t==K){
-            updateAnswer();
-            return;
-        }
-        for(int i=0;i<K;i++){
-            if(rotateInfo[i][3]==0){
-                rotateInfo[i][3]=1;
-                rotateOrder[t] = i;
-                find(t+1);
-                rotateInfo[i][3]=0;
-            }
-        }
+    static boolean np() {
+    	int lp=0, blp=0, tmp;
+    	for(lp = K-1;lp>0&&rotateOrder[lp-1]>=rotateOrder[lp];lp--);
+    	if(lp==0) return false;
+    	for(blp = K-1;rotateOrder[lp-1]>=rotateOrder[blp];blp--);
+    	tmp = rotateOrder[blp];
+    	rotateOrder[blp] = rotateOrder[lp-1];
+    	rotateOrder[lp-1] = tmp;
+    	for(int l = lp, r = K-1;l<r;) {
+    		tmp = rotateOrder[l];
+        	rotateOrder[l++] = rotateOrder[r];
+        	rotateOrder[r--] = tmp;
+    	}
+    	return true;
     }
     static void updateAnswer(){
         for(int i=0;i<N;i++){
