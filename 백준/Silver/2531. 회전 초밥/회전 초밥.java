@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.StringTokenizer;
+
+public class Main {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static StringTokenizer st;
+	public static void main(String[] args) throws Exception {
+		st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken()), d = Integer.parseInt(st.nextToken()), k = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+		int[] data = new int[n], count = new int[d+1];
+		count[c]++;
+		for(int i=0;i<n;i++){
+			data[i] = Integer.parseInt(br.readLine());
+		}
+		int now = 1, max;
+		for(int i=0;i<k;i++){
+			if(count[data[i]]++==0) now++;
+		}
+		max = now;
+		for(int i=k;i<n;i++){
+			if(--count[data[i-k]]==0) now--;
+			if(count[data[i]]++==0) now++;
+			max = Math.max(max,now);
+		}
+		for(int i=0;i<k;i++){
+			if(--count[data[n+i-k]]==0) now--;
+			if(count[data[i]]++==0) now++;
+			max = Math.max(max,now);
+		}
+		System.out.println(max);
+	}
+}
