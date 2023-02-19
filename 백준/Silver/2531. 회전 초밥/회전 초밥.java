@@ -22,12 +22,18 @@ public class Main {
 		for(int i=k;i<n;i++){
 			if(--count[data[i-k]]==0) now--;
 			if(count[data[i]]++==0) now++;
-			max = Math.max(max,now);
+			if((max = Math.max(max,now))==k+1){
+				System.out.println(k+1);
+				return;
+			}
 		}
 		for(int i=0;i<k;i++){
 			if(--count[data[n+i-k]]==0) now--;
 			if(count[data[i]]++==0) now++;
-			max = Math.max(max,now);
+			if((max = Math.max(max,now))==k+1){
+				System.out.println(k+1);
+				return;
+			}
 		}
 		System.out.println(max);
 	}
