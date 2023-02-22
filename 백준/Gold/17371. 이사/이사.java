@@ -1,10 +1,13 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 
 	static class Point {
@@ -41,6 +44,7 @@ public class Main {
 				idx = nidx;
 			}
 		}
-		System.out.printf("%f %f",(double)p.get(idx).r,(double)p.get(idx).c);
+		bw.write(Double.toString(p.get(idx).r));bw.write(" ");bw.write(Double.toString(p.get(idx).c));
+		bw.flush();
 	}
 }
