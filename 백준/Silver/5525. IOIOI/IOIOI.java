@@ -6,16 +6,12 @@ public class Main{
     public void solution() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine()), m = Integer.parseInt(br.readLine()), answer = 0;
-        char[] s = br.readLine().toCharArray();
-        int size = 0;
-        for(int i=0;i<m;i++){
-            if((s[i]=='I'&&size%2==0)||(s[i]=='O'&&size%2==1)){
-                size++;
-                if(size>2*n&&size%2==1){
-                    answer++;
-                }
-            }else{
-                size = s[i]=='I'?1:0;
+        String s = br.readLine(), p = "I";
+        for(int i=0;i<n;i++)
+            p+="OI";
+        for(int i=0;i<m-2*n;i++){
+            if(p.equals(s.substring(i,i+2*n+1))){
+                answer++;
             }
         }
         System.out.println(answer);

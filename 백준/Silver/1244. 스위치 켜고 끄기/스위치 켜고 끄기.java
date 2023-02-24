@@ -1,7 +1,13 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+/**
+ * @link : https://www.acmicpc.net/problem/1244
+ * @perf : 11600kb,	76ms
+ * @category : 구현, 시뮬레이션
+ * @author : tngks1995
+ * @note : 주의사항
+ */
 public class Main{
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
