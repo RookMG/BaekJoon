@@ -5,7 +5,10 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 	static int[] parent, population, links;
-	static int N, answer = Integer.MAX_VALUE, group;
+	static int findP(int num){
+		return parent[num] = (parent[num]==num)?num:findP(parent[num]);
+	}
+	static int N, answer = -1, group;
 	public static void main(String[] args) throws Exception {
 		N = Integer.parseInt(br.readLine());
 		parent = new int[N+1]; population = new int[N+1]; links = new int[N+1];
@@ -16,39 +19,36 @@ public class Main {
 			for(int j = Integer.parseInt(st.nextToken());j>0;j--) links[i] |= 1<<Integer.parseInt(st.nextToken());
 		}
 		for(group=0;group<1<<N;group++){
-			makeP();
-			if(validGroup()) updateAnswer();
-		}
-		bw.write(answer!=Integer.MAX_VALUE?Integer.toString(answer):"-1");
-		bw.flush();
-	}
-	static void makeP(){
-		for(int i=1;i<=N;i++){
-			parent[i] = i;
-		}
-	}
-	static int findP(int num){
-		return parent[num] = (parent[num]==num)?num:findP(parent[num]);
-	}
-	static boolean validGroup(){
-		int count = N;
-		for(int j=0;j<N-1;j++){
-			for(int k=j+1;k<N;k++){
-				int ap = findP(j+1), bp = findP(k+1);
-				if(inGroup(j,k)&&ap!=bp) {
-					parent[Math.max(ap,bp)]=Math.min(ap,bp);
-					count--;
+			for(int i=1;i<=N;i++){
+				parent[i] = i;
+			}
+			int count = N;
+			for(int j=0;j<N-1;j++){
+				for(int k=j+1;k<N;k++){
+					int ap = findP(j+1), bp = findP(k+1);
+					if(inGroup(j,k)&&ap!=bp) {
+						parent[Math.max(ap,bp)]=Math.min(ap,bp);
+						count--;
+					}
 				}
 			}
+			if(count==2) updateAnswer();
 		}
-		return count==2;
+		bw.write(Integer.toString(answer));
+		bw.flush();
 	}
 	static boolean inGroup(int a, int b){
-		return (((group&(1<<a))==0&&(group&(1<<b))==0)||((group&(1<<a))!=0&&(group&(1<<b))!=0))&&((links[a+1]&(1<<(b+1)))!=0);
+		if (((group&(1<<a))==0&&(group&(1<<b))==0)||((group&(1<<a))!=0&&(group&(1<<b))!=0)){
+			return (links[a+1]&(1<<(b+1)))!=0;
+		}
+		return false;
 	}
 	static void updateAnswer(){
 		int now = 0;
-		for(int i=0;i<N;i++) now+=(group&(1<<i))==0?population[i+1]:-population[i+1];
-		answer = Math.min(answer,Math.abs(now));
+		for(int i=0;i<N;i++){
+			if((group&(1<<i))==0) now += population[i+1];
+			else now -= population[i+1];
+		}
+		answer = (answer==-1)?Math.abs(now):Math.min(answer,Math.abs(now));
 	}
 }
