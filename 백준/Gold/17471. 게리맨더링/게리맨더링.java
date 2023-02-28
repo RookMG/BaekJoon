@@ -9,7 +9,6 @@ public class Main {
 		return parent[num] = (parent[num]==num)?num:findP(parent[num]);
 	}
 	static int N, answer = Integer.MAX_VALUE, group;
-	static boolean found = false;
 	public static void main(String[] args) throws Exception {
 		N = Integer.parseInt(br.readLine());
 		parent = new int[N+1]; population = new int[N+1]; links = new int[N+1];
@@ -35,17 +34,15 @@ public class Main {
 			}
 			if(count==2) updateAnswer();
 		}
-		bw.write(found?Integer.toString(answer):"-1");
+		bw.write(answer!=Integer.MAX_VALUE?Integer.toString(answer):"-1");
 		bw.flush();
 	}
 	static boolean inGroup(int a, int b){
-		if (((group&(1<<a))==0&&(group&(1<<b))==0)||((group&(1<<a))!=0&&(group&(1<<b))!=0)) return (links[a+1]&(1<<(b+1)))!=0;
-		return false;
+		return (((group&(1<<a))==0&&(group&(1<<b))==0)||((group&(1<<a))!=0&&(group&(1<<b))!=0))&&((links[a+1]&(1<<(b+1)))!=0);
 	}
 	static void updateAnswer(){
 		int now = 0;
 		for(int i=0;i<N;i++) now+=(group&(1<<i))==0?population[i+1]:-population[i+1];
 		answer = Math.min(answer,Math.abs(now));
-		found = true;
 	}
 }
