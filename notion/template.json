@@ -1,0 +1,157 @@
+{
+	"parent": {
+		"database_id": ""
+	},
+	"icon": {
+		"external": {
+			"url": "https://static.solved.ac/tier_small/1.svg"
+		}
+	},
+	"properties": {
+		"Title": {
+			"title": [
+				{
+					"text": {
+						"content": " A-B - 1001"
+					}
+				}
+			]
+		},
+		"Tier": {
+			"select": {
+				"name": "Bronze"
+			}
+		},
+		"Grade": {
+			"select": {
+				"name": "V"
+			}
+		},
+		"Category": {
+			"multi_select": [
+				{
+					"name": "\uad6c\ud604(implementation)"
+				},
+				{
+					"name": "\uc0ac\uce59\uc5f0\uc0b0(arithmetic)"
+				},
+				{
+					"name": "\uc218\ud559(math)"
+				}
+			]
+		},
+		"URL": {
+        "type": "url",
+        "url": ""
+  }
+	},
+	"children": [
+
+		{
+			"object": "block",
+			"type": "heading_3",
+			"heading_3": {
+			  "rich_text": [{
+				"type": "text",
+				"text": {
+				  "content": "성능요약"
+				}
+			  }],
+			  "color": "default",
+			  "is_toggleable": false
+			}
+		  },
+
+		  {
+			"object": "block",
+			"type": "table",
+				"table": {
+					"table_width": 2,
+					"has_column_header": true,
+					"has_row_header": false,
+					"children": [
+						{
+							"type": "table_row",
+							"table_row": {
+							  "cells": [
+								[
+								  {
+									"type": "text",
+									"text": {
+									  "content": "Memory"
+									}
+								  }
+								],
+								[
+									{
+										"type": "text",
+										"text": {
+										  "content": "Time"
+										}
+									  }
+								]
+								
+							  ]
+							}
+						  },
+						  {
+							"type": "table_row",
+							"table_row": {
+							  "cells": [
+								[
+								  {
+									"type": "text",
+									"text": {
+									  "content": ""
+									}
+								  }
+								],
+								[
+									{
+										"type": "text",
+										"text": {
+										  "content": ""
+										}
+									  }
+								]
+								
+							  ]
+							}
+						  }
+					]
+				}
+		  },
+
+
+
+		{
+			"object": "block",
+			"type": "heading_3",
+			"heading_3": {
+			  "rich_text": [{
+				"type": "text",
+				"text": {
+				  "content": "답안"
+				}
+			  }],
+			  "color": "default",
+			  "is_toggleable": false
+			}
+		  },
+		{
+			"object": "block",
+			"type": "code",
+			"code": {
+				"rich_text": [
+					{
+						"type": "text",
+						"text": {
+							"content": ""
+						}
+					}
+				],
+				"language": ""
+			}
+		}
+	]
+}
