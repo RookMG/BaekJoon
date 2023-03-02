@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
-
 public class Main {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
+	static final int INF = Integer.MAX_VALUE;
 	public static void main(String[] args) throws Exception {
 		st = new StringTokenizer(br.readLine());
 		int V = Integer.parseInt(st.nextToken()), E = Integer.parseInt(st.nextToken()), start = Integer.parseInt(br.readLine());
@@ -15,30 +15,24 @@ public class Main {
 			int from = Integer.parseInt(st.nextToken()), to = Integer.parseInt(st.nextToken()), weight = Integer.parseInt(st.nextToken());
 			links.get(from).add(new int[]{to,weight});
 		}
-		int[] distance = new int[V+1];
-		boolean[] visit = new boolean[V+1];
-		Arrays.fill(distance, Integer.MAX_VALUE);
-		distance[start] = 0;
-		int min, current;
-		for(int c=1;c<=V;c++) {
-			// step1 : 경유지로 처리되지 않은 정점 중 출발지에서 가장 가까운 정점 선택
-			current = -1;
-			min = Integer.MAX_VALUE;
-			for(int i=1;i<=V;i++) {
-				if(!visit[i] && min > distance[i]) {
-					min = distance[i];
-					current = i;
-				}
+		PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
+			@Override
+			public int compare(int[] o1, int[] o2) {
+				return Integer.compare(o1[1],o2[1]);
 			}
-			if(current==-1) break;
-			visit[current] = true;
-
-			for(int[] link : links.get(current)){
-				distance[link[0]] = Math.min(distance[link[0]],min+link[1]);
+		});
+		int[] distance = new int[V+1];
+		Arrays.fill(distance, INF);
+		distance[start] = 0;
+		pq.offer(new int[]{start,0});
+		while(!pq.isEmpty()){
+			int[] minLink = pq.poll();
+			for(int[] link : links.get(minLink[0])){
+				if(distance[link[0]]>minLink[1]+link[1]) pq.offer(new int[]{link[0], distance[link[0]] = minLink[1]+link[1]});
 			}
 		}
 		for(int c=1;c<=V;c++) {
-			bw.write(distance[c]==Integer.MAX_VALUE?"INF":Integer.toString(distance[c]));
+			bw.write(distance[c]==INF?"INF":Integer.toString(distance[c]));
 			bw.write("\n");
 		}
 		bw.flush();
