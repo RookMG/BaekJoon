@@ -32,7 +32,7 @@ public class Main {
 	static void updateMap(){
 		int dir = 0, r = N/2, c = N/2, idx = 0, l;
 		int[][] delta = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
-		ArrayDeque<Integer> dq = new ArrayDeque<>(), stack = new ArrayDeque<>(), nq;
+		ArrayDeque<Integer> dq = new ArrayDeque<>(), nq;
 		for (l = 1; l < N; dir = (dir+1)%4) {
 			for(int i=0;i<l;i++){
 				r+=delta[dir][0];
