@@ -97,17 +97,6 @@ public class Main {
 				}
 				else map[sharks[i].r][sharks[i].c].shark = i;
 			}
-//			for(int i=0;i<N;i++){
-//				for(int j=0;j<N;j++){
-//					System.out.print(map[i][j].shark+" ");
-//				}
-//				System.out.print("\t");
-//				for(int j=0;j<N;j++){
-//					System.out.print(Math.max(K+map[i][j].smellTime-time, 0)+" ");
-//				}
-//				System.out.println();
-//			}
-//			System.out.println("^ this is @time"+time);
 		}
 		bw.write(Integer.toString(time));
 		bw.flush();
