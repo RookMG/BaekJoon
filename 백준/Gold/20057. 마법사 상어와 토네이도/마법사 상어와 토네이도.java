@@ -1,64 +1,99 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
+// 준홍 코드
+
 public class Main {
-	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	static BufferedReader br;
 	static StringTokenizer st;
-	static final int[][] delta = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}}, wind = {{1, 2, 1}, {1, 7}, {1, 1, 2}, {0, 1, 10}, {0, 0, 5}, {3, 2, 1}, {3, 7}, {3, 3, 2}, {0, 3, 10}};
-	static int N, r, c, dir, l;
-	static long answer = 0;
-	static int[][] map;
+	static int N;
+	static int[][] board;
+	static int answer = 0;
+	static int[][] dir = { { 0, -1 }, { 1, 0 }, { 0, 1 }, { -1, 0 } };
+	static boolean isIn(int r, int c) {
+		return (r >= 0 && r < N && c >= 0 && c < N);
+	}
+	static int[][][] moveDir =
+			{
+					{
+							{0,-2, 5},{-1,-1,10},{1,-1,10},{-2,0,2},{-1,0,7},{1,0,7},{2,0,2},{-1,1,1},{1,1,1},{0,-1}
+					},{
+					{2,0,5},{1,-1,10},{1,1,10},{0,-2,2},{0,-1,7},{0,1,7},{0,2,2},{-1,-1,1},{-1,1,1},{1,0}
+			},{
+					{0,2,5},{1,1,10},{-1,1,10},{2,0,2},{1,0,7},{-1,0,7},{-2,0,2},{1,-1,1},{-1,-1,1},{0,1}
+			},{
+					{-2,0,5},{-1,1,10},{-1,-1,10},{0,2,2},{0,1,7},{0,-1,7},{0,-2,2},{1,1,1},{1,-1,1},{-1,0}
+			}
+			};
 
-	public static void main(String[] args) throws Exception {
+	static void moveTo(int r, int c, int d) {
+		int target = board[r][c];
+		int[][] movement = moveDir[d];
+		int remain = target;
+		int nr;
+		int nc;
+		int sand;
+		for(int i=0;i<9;i++) {
+			nr = r+movement[i][0];
+			nc = c+movement[i][1];
+			sand = target*movement[i][2]/100;
+			if(isIn(nr,nc)) {
+				board[nr][nc] += sand;
+			}else {
+				answer +=sand;
+			}
+			remain -=sand;
+		}
+		nr = r+movement[9][0];
+		nc = c+movement[9][1];
+		if(isIn(nr,nc)) {
+			board[nr][nc] += remain;
+		}else {
+			answer +=remain;
+		}
+		board[r][c] = 0;
+	}
+	static void play(int i, int j) {
+		int r = i;
+		int c = j;
+		int d = 0;
+		int offset = 1;
+		int nowGo = 0;
+		int lengthBreak = 0;
+		while(true) {
+			r = r+dir[d][0];
+			c = c+dir[d][1];
+			nowGo++;
+			moveTo(r,c,d);
+			if(r==0 && c==0){
+				System.out.println(answer);
+				return;
+			}
+
+			if(nowGo == offset) {
+				lengthBreak++;
+				d = (d+1)%4;
+				nowGo=0;
+				if(lengthBreak ==2) {
+					offset++;
+					lengthBreak = 0;
+				}
+			}
+
+		}
+	}
+	public static void main(String[] args) throws IOException {
+		br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
-		r = N / 2;
-		c = N / 2;
-		dir = 0;
-		map = new int[N][N];
-		for (int i = 0; i < N; i++) {
+		board = new int[N][N];
+		for(int i=0;i<N;i++) {
 			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < N; j++) map[i][j] = Integer.parseInt(st.nextToken());
-		}
-		for (l = 1; l < N; dir = (dir+1)%4) {
-			for(int i=0;i<l;i++){
-				r+=delta[dir][0];
-				c+=delta[dir][1];
-				move();
+			for(int j=0;j<N;j++) {
+				board[i][j] = Integer.parseInt(st.nextToken());
 			}
-			if((dir&1)==1) l++;
 		}
-		l--;
-		for(int i=0;i<l;i++){
-			r+=delta[dir][0];
-			c+=delta[dir][1];
-			move();
-		}
-		bw.write(Long.toString(answer));
-		bw.flush();
-	}
-
-	static void move(){
-		int moved = 0, sand = map[r][c];
-		map[r][c] = 0;
-		for(int[] cell: wind){
-			int nr = r, nc = c, move = sand*cell[cell.length-1]/100;
-			for(int i=0;i<cell.length-1;i++){
-				nr += delta[(dir+cell[i])%4][0];
-				nc += delta[(dir+cell[i])%4][1];
-			}
-			moved += move;
-			if(isIn(nr,nc)) map[nr][nc]+=move;
-			else answer += move;
-		}
-		if(isIn(r+delta[dir][0],c+delta[dir][1])) map[r+delta[dir][0]][c+delta[dir][1]]+=sand-moved;
-		else answer += sand-moved;
-	}
-
-	static boolean isIn(int nr, int nc) {
-		return 0 <= nr && nr < N && 0 <= nc && nc < N;
+		play((N-1)/2, (N-1)/2);
 	}
 }
