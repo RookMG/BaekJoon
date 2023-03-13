@@ -466,6 +466,7 @@
 |4354. 문자열 제곱|[링크](./%EB%B0%B1%EC%A4%80/Platinum/4354.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EC%A0%9C%EA%B3%B1/README.md)|
 |5373. 큐빙|[링크](./%EB%B0%B1%EC%A4%80/Platinum/5373.%E2%80%85%ED%81%90%EB%B9%99/README.md)|
 |6549. 히스토그램에서 가장 큰 직사각형|[링크](./%EB%B0%B1%EC%A4%80/Platinum/6549.%E2%80%85%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95/README.md)|
+|8111. 0과 1|[링크](./%EB%B0%B1%EC%A4%80/Platinum/8111.%E2%80%850%EA%B3%BC%E2%80%851/README.md)|
 |9120. Oulipo|[링크](./%EB%B0%B1%EC%A4%80/Platinum/9120.%E2%80%85Oulipo/README.md)|
 ### 🚀 Silver
 | 문제번호 | 링크 |
