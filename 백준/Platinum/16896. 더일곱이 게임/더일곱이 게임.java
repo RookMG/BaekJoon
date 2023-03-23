@@ -8,6 +8,6 @@ public class Main {
         bw.flush();
     }
     static boolean grundy(long num){
-        return num%2==0||((num/2)&750599937895082L)!=0;
+        return (((num%2)^1)|(num&1501199875790164L))!=0;
     }
 }
