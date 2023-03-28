@@ -1,41 +1,35 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedList;
-
-public class Main{
-
-    public void solution() throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+import java.io.*;
+import java.util.*;
+public class Main {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static StringTokenizer st;
+    public static void main(String[] args) throws Exception{
         int n = Integer.parseInt(br.readLine()), now = 0, answer = -1;
-        ArrayList<Integer> done = new ArrayList<>();
-        LinkedList<Integer> q = new LinkedList<>(), nq = new LinkedList<>();
+        HashSet<Integer> visit = new HashSet<>();
+        ArrayDeque<Integer> q = new ArrayDeque<>();
         q.offer(n);
         while(now!=1){
-            while(!q.isEmpty()){
-                now = q.pop();
+            for(int i=q.size();i>0;i--){
+                now = q.pollFirst();
                 if(now==1)
                     break;
-                if(now%2==0&&!done.contains(now/2)){
-                    done.add(now/2);
-                    nq.offer(now/2);
+                if(now%2==0&&!visit.contains(now/2)){
+                    visit.add(now/2);
+                    q.offerLast(now/2);
                 }
-                if(now%3==0&&!done.contains(now/3)){
-                    done.add(now/3);
-                    nq.offer(now/3);
+                if(now%3==0&&!visit.contains(now/3)){
+                    visit.add(now/3);
+                    q.offerLast(now/3);
                 }
-                if(!done.contains(now-1)){
-                    done.add(now-1);
-                    nq.offer(now-1);
+                if(!visit.contains(now-1)){
+                    visit.add(now-1);
+                    q.offerLast(now-1);
                 }
             }
-            q = nq;
-            nq = new LinkedList<>();
             answer++;
         }
-        System.out.println(answer);
-    }
-    public static void main(String[] args) throws Exception{
-        new Main().solution();
+        bw.write(Integer.toString(answer));
+        bw.flush();
     }
 }
