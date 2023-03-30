@@ -22,14 +22,17 @@ public class Main {
         link = new int[M+1];
         for(int i=1;i<=N;i++){
             visit = new boolean[N + 1];
-            if (dfs(i)) answer++;
+            if (dfs(i)){
+                answer++;
+                if(answer == M) break;
+            }
         }
-        for(int i=1;i<=N;i++){
+        for(int i=1;i<=N&&K>0&&answer<M;i++){
             visit = new boolean[N + 1];
             if (dfs(i)){
                 answer++;
                 K--;
-                if(K==0) break;
+                if(K==0||answer==M) break;
             }
         }
         bw.write(Integer.toString(answer));
