@@ -5,8 +5,8 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 	static final int[][] delta = {{1,0},{-1,0},{0,1},{0,-1}};
-	static int R, C, answer = 0, now;
-	static ArrayList<int[]> holes = new ArrayList<>(), virus = new ArrayList<>();
+	static int R, C, answer, now, size = -3;
+	static ArrayList<int[]> virus = new ArrayList<>();
 	static int[][] map;
 	static boolean[][] visit;
 
@@ -19,40 +19,47 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			for(int c=0;c<C;c++){
 				map[r][c] = Integer.parseInt(st.nextToken());
-				if(map[r][c]==0) holes.add(new int[]{r,c});
+				if(map[r][c]==0) size++;
 				else if(map[r][c]==2) virus.add(new int[]{r,c});
 			}
 		}
-		recur(0, 0);
+		for(int i=0;i<R*C;i++){
+			if(map[i/C][i%C]!=0) continue;
+			map[i/C][i%C] = 1;
+			for(int j=i+1;j<R*C;j++){
+				if(map[j/C][j%C]!=0) continue;
+				map[j/C][j%C] = 1;
+				for(int k=j+1;k<R*C;k++){
+					if(map[k/C][k%C]!=0) continue;
+					map[k/C][k%C] = 1;
+					visit = new boolean[R][C];
+					now = size;
+					for(int[] pos:virus){
+						if(visit[pos[0]][pos[1]]) continue;
+						visit[pos[0]][pos[1]] = true;
+						dfs(pos[0],pos[1]);
+					}
+					answer = Math.max(answer,now);
+					map[k/C][k%C] = 0;
+				}
+				map[j/C][j%C] = 0;
+			}
+			map[i/C][i%C] = 0;
+		}
 		bw.write(Integer.toString(answer));
 		bw.flush();
-	}
-
-	static void recur(int order, int start){
-		if(order==3){
-			visit = new boolean[R][C];
-			now = holes.size()-3;
-			for(int[] pos:virus){
-				if(visit[pos[0]][pos[1]]) continue;
-				visit[pos[0]][pos[1]] = true;
-				dfs(pos[0],pos[1]);
-			}
-			answer = Math.max(answer,now);
-			return;
-		}
-		for(int i=start;i<holes.size();i++){
-			map[holes.get(i)[0]][holes.get(i)[1]] = 1;
-			recur(order+1,i+1);
-			map[holes.get(i)[0]][holes.get(i)[1]] = 0;
-		}
 	}
 
 	static void dfs(int r, int c){
 		for(int d = 0;d<4;d++){
 			int nr = r+delta[d][0], nc = c+delta[d][1];
-			if(!isIn(nr,nc)||visit[nr][nc]||map[nr][nc]==1) continue;
+			if(!isIn(nr,nc)||visit[nr][nc]) continue;
 			visit[nr][nc] = true;
-			if(map[nr][nc]==0) now--;
+			if(map[nr][nc]==0) {
+				now--;
+			} else if (map[nr][nc]==1) {
+				continue;
+			}
 			dfs(nr,nc);
 		}
 	}
