@@ -3,8 +3,8 @@ import java.util.*;
 public class Main {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	static StringTokenizer st;
 	static StringBuilder sb = new StringBuilder();
+	static StringTokenizer st;
 	static final int MAX = 156251;
 	static final int[][] delta = {{1,0},{0,1},{-1,0},{0,-1}};
 	static int[][] map, dp;
@@ -30,6 +30,7 @@ public class Main {
 			pq.offer(new int[]{0,0,dp[0][0] = map[0][0]});
 			while(!pq.isEmpty()) {
 				int[] now = pq.poll();
+				if(now[0] == N-1 && now[1] == N-1) break;
 				for (int d = 0; d < 4; d++) {
 					int nr = now[0] + delta[d][0], nc = now[1] + delta[d][1];
 					if (!(0<=nr&&nr<N&&0<=nc&&nc<N)) continue;
