@@ -5,7 +5,7 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 	static StringBuilder sb = new StringBuilder();
-	static final int MAX = 2_000_000;
+	static final int MAX = 156251;
 	static final int[][] delta = {{1,0},{0,1},{-1,0},{0,-1}};
 	static int[][] map, dp;
 	static int N;
@@ -26,29 +26,23 @@ public class Main {
 					dp[r][c] = MAX;
 				}
 			}
-			bfs();
+			pq.clear();
+			pq.offer(new int[]{0,0,dp[0][0] = map[0][0]});
+			while(!pq.isEmpty()) {
+				int[] now = pq.poll();
+				for (int d = 0; d < 4; d++) {
+					int nr = now[0] + delta[d][0], nc = now[1] + delta[d][1];
+					if (!(0<=nr&&nr<N&&0<=nc&&nc<N)) continue;
+					int cost = now[2] + map[nr][nc];
+					if (dp[nr][nc] > cost) {
+						dp[nr][nc] = cost;
+						pq.offer(new int[]{nr,nc,cost});
+					}
+				}
+			}
 			sb.append("Problem ").append(t).append(": ").append(dp[N-1][N-1]).append("\n");
 		}
 		bw.write(sb.toString());
 		bw.flush();
-	}
-	static void bfs(){
-		pq.clear();
-		pq.offer(new int[]{0,0,dp[0][0] = map[0][0]});
-		while(!pq.isEmpty()) {
-			int[] now = pq.poll();
-			for (int d = 0; d < 4; d++) {
-				int nr = now[0] + delta[d][0], nc = now[1] + delta[d][1];
-				if (!isIn(nr, nc)) continue;
-				int cost = now[2] + map[nr][nc];
-				if (dp[nr][nc] > cost) {
-					dp[nr][nc] = cost;
-					pq.offer(new int[]{nr,nc,cost});
-				}
-			}
-		}
-	}
-	static boolean isIn(int r, int c){
-		return 0<=r&&r<N&&0<=c&&c<N;
 	}
 }
