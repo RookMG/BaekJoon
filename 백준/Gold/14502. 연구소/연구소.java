@@ -5,22 +5,26 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 	static final int[][] delta = {{1,0},{-1,0},{0,1},{0,-1}};
-	static int R, C, answer, now, size = -3;
-	static ArrayList<int[]> virus = new ArrayList<>();
+	static int R, C, answer, now, size = -3, vsize;
+	static int[] virus;
 	static int[][] map;
 	static boolean[][] visit;
-
 	public static void main(String[] args) throws Exception {
 		st = new StringTokenizer(br.readLine());
 		R = Integer.parseInt(st.nextToken());
 		C = Integer.parseInt(st.nextToken());
 		map = new int[R][C];
+		virus = new int[R*C*2];
+		vsize = 0;
 		for(int r=0;r<R;r++){
 			st = new StringTokenizer(br.readLine());
 			for(int c=0;c<C;c++){
 				map[r][c] = Integer.parseInt(st.nextToken());
 				if(map[r][c]==0) size++;
-				else if(map[r][c]==2) virus.add(new int[]{r,c});
+				else if(map[r][c]==2){
+					virus[vsize*2] = r;
+					virus[vsize++*2+1] = c;
+				}
 			}
 		}
 		for(int i=0;i<R*C;i++){
@@ -34,10 +38,11 @@ public class Main {
 					map[k/C][k%C] = 1;
 					visit = new boolean[R][C];
 					now = size;
-					for(int[] pos:virus){
-						if(visit[pos[0]][pos[1]]) continue;
-						visit[pos[0]][pos[1]] = true;
-						dfs(pos[0],pos[1]);
+					for(int v=0;v<vsize;v++){
+						int r = virus[v*2], c = virus[v*2+1];
+						if(visit[r][c]) continue;
+						visit[r][c] = true;
+						dfs(r,c);
 					}
 					answer = Math.max(answer,now);
 					map[k/C][k%C] = 0;
@@ -49,7 +54,6 @@ public class Main {
 		bw.write(Integer.toString(answer));
 		bw.flush();
 	}
-
 	static void dfs(int r, int c){
 		for(int d = 0;d<4;d++){
 			int nr = r+delta[d][0], nc = c+delta[d][1];
@@ -63,7 +67,6 @@ public class Main {
 			dfs(nr,nc);
 		}
 	}
-
 	static boolean isIn(int r, int c){
 		return 0<=r&&r<R&&0<=c&&c<C;
 	}
