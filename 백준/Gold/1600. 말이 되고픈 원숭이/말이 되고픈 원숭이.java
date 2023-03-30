@@ -21,7 +21,7 @@ public class Main {
 		}
 		ArrayDeque<int[]> dq = new ArrayDeque<>();
 		dq.offer(new int[] {0,0,0});
-		int answer = 0;
+		int answer = 0, nr=0, nc=0;
 		while(!dq.isEmpty()) {
 			for(int s = dq.size();s>0;s--) {
 				int[] point = dq.pollFirst();
@@ -30,20 +30,22 @@ public class Main {
 					bw.flush();
 					return;
 				}
-				for(int i=0;i<delta.length;i++) {
-					int nr = point[0]+delta[i][0], nc = point[1]+delta[i][1];
-					if(isIn(nr,nc)&&!visit[nr][nc][point[2]]&&map[nr][nc]==0) {
-						visit[nr][nc][point[2]]=true;
-						dq.offerLast(new int[]{nr, nc, point[2]});
-					}
-				}
 				if(point[2]<K) {
 					for(int i=0;i<knight.length;i++) {
-						int nr = point[0]+knight[i][0], nc = point[1]+knight[i][1];
+						nr = point[0]+knight[i][0];
+						nc = point[1]+knight[i][1];
 						if(isIn(nr,nc)&&!visit[nr][nc][point[2]+1]&&map[nr][nc]==0) {
 							visit[nr][nc][point[2]+1]=true;
 							dq.offerLast(new int[] {nr,nc,point[2]+1});
 						}
+					}
+				}
+				for(int i=0;i<delta.length;i++) {
+					nr = point[0]+delta[i][0];
+					nc = point[1]+delta[i][1];
+					if(isIn(nr,nc)&&!visit[nr][nc][point[2]]&&map[nr][nc]==0) {
+						visit[nr][nc][point[2]]=true;
+						dq.offerLast(new int[]{nr, nc, point[2]});
 					}
 				}
 			}
