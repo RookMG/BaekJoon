@@ -18,7 +18,10 @@ public class Main {
 		for(int r=0;r<R;r++){
 			map[r] = br.readLine().toCharArray();
 			for(int c=0;c<C;c++){
-				if(map[r][c]=='0') q.offer(new Node(r,c,0));
+				if(map[r][c]=='0'){
+					q.offer(new Node(r,c,0));
+					visit[r][c][0] = true;
+				}
 			}
 		}
 		answer = -1;
@@ -32,10 +35,9 @@ public class Main {
 				}
 				for(int d=0;d<4;d++){
 					int nr = now.r+delta[d][0], nc = now.c+delta[d][1], key = now.key;
-					if(!isIn(nr,nc)||map[nr][nc]=='#') continue;
-					if("ABCDEF".indexOf(map[nr][nc])>=0&&(key&(1<<(map[nr][nc]-'A')))==0) continue;
-					if("abcdef".indexOf(map[nr][nc])>=0) key|= 1<<(map[nr][nc]-'a');
-					if(visit[nr][nc][key]) continue;
+					if(!isIn(nr,nc)) continue;
+					if(map[nr][nc]>='a'&&map[nr][nc]<='f') key|= 1<<(map[nr][nc]-'a');
+					if(map[nr][nc]=='#'||(map[nr][nc]>='A'&&map[nr][nc]<='F'&&(key&(1<<(map[nr][nc]-'A')))==0)||visit[nr][nc][key]) continue;
 					visit[nr][nc][key] = true;
 					q.offerLast(new Node(nr,nc,key));
 				}
