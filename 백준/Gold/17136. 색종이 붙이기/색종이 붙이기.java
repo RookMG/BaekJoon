@@ -20,6 +20,7 @@ public class Main {
 		bw.flush();
 	}
 	static void recur(int cnt, int change){
+		if(change>answer) return;
 		if(cnt==0){
 			answer = Math.min(answer,change);
 			return;
