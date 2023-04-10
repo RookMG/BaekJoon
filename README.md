@@ -298,6 +298,7 @@
 |17104. 골드바흐 파티션 2|[링크](./%EB%B0%B1%EC%A4%80/Diamond/17104.%E2%80%85%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%E2%80%85%ED%8C%8C%ED%8B%B0%EC%85%98%E2%80%852/README.md)|
 |18185. 라면 사기 （Small）|[링크](./%EB%B0%B1%EC%A4%80/Diamond/18185.%E2%80%85%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Small%EF%BC%89/%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Small%EF%BC%89.java)|
 |18186. 라면 사기 （Large）|[링크](./%EB%B0%B1%EC%A4%80/Diamond/18186.%E2%80%85%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Large%EF%BC%89/%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Large%EF%BC%89.java)|
+|8464. Non－Squarefree Numbers|[링크](./%EB%B0%B1%EC%A4%80/Diamond/8464.%E2%80%85Non%EF%BC%8DSquarefree%E2%80%85Numbers/README.md)|
 ### 🚀 Gold
 | 문제번호 | 링크 |
 | ----- | ----- |
