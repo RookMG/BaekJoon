@@ -15,7 +15,7 @@ public class Main {
 			}
 		}
 		long left, right, mid;
-		for(left = 0, right = 1_000_000_000_000L, mid = 500_000_000_000L;left<right-1;mid = (left+right)/2){
+		for(left = 0, right = 100_000_000_000L, mid = 50_000_000_000L;left<right-1;mid = (left+right)/2){
 			if(mid-solve(mid)<k) left = mid;
 			else right = mid;
 		}
