@@ -5,18 +5,14 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 	static int[] three = {0,0,0};
-	static int p, answer, now, b, c=1;
+	static int p, answer, now, c=1;
 	public static void main(String[] args) throws Exception {
 		int n = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
-		b = Integer.parseInt(st.nextToken());
-		for(int i=1;i<n;i++){
-			if(b==Integer.parseInt(st.nextToken())){
-				update();
-				continue;
-			}
-			c++;
-			b = 1-b;
+		boolean b = st.nextToken().charAt(0)=='0';
+		for(int i=1;i<n;i++,c++){
+			if(b!=(st.nextToken().charAt(0)=='0')) b = !b;
+			else update();
 		}
 		update();
 		bw.write(Integer.toString(answer));
@@ -26,6 +22,6 @@ public class Main {
 		now -= three[p%3];
 		now += three[p++%3] = c;
 		answer = Math.max(answer,now);
-		c = 1;
+		c = 0;
 	}
 }
