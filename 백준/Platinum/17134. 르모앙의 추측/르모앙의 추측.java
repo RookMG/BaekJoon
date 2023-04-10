@@ -4,28 +4,26 @@ public class Main {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
-	static final int MOD = 998244353, BASE = 3, SIZE = 2097152*2, END = 2097152;
-
+	static final int MOD = 998244353, BASE = 3, SIZE = 4194304, END = 1048576;
 	public static void main(String[] args) throws Exception {
 		long[] arr1 = new long[SIZE],arr2 = new long[SIZE];
 		boolean[] prime = new boolean[END];
 		Arrays.fill(prime,true);
 		for(int i=2;i<1025;i++){
 			if(!prime[i]) continue;
-			for(int j=i*i;j<END/2;j+=i){
+			for(int j=i*i;j<END;j+=i){
 				prime[j] = false;
 			}
 		}
-		for(int i=2;i<END/2;i++){
+		for(int i=2;i<END;i++){
 			if(!prime[i]) continue;
 			arr1[i] = 1;
-			if(i*2<END/2) arr2[i*2] = 1;
+			if(i*2<END) arr2[i*2] = 1;
 		}
 		arr1 = fft(arr1,false);
 		arr2 = fft(arr2,false);
 		for(int i=0;i<SIZE;i++) arr1[i] = arr1[i]*arr2[i]%MOD;
 		arr1 = fft(arr1,true);
-		//System.out.println(Arrays.toString(Arrays.copyOf(arr1,20)));
 		for(int i=Integer.parseInt(br.readLine());i>0;i--){
 			int num = Integer.parseInt(br.readLine());
 			sb.append(arr1[num]).append("\n");
@@ -33,7 +31,6 @@ public class Main {
 		bw.write(sb.toString());
 		bw.flush();
 	}
-
 	static long[] fft(long[] data, boolean inv){
 		long[] arr = Arrays.copyOf(data,data.length);
 		for(int i=1, j=0;i<arr.length;i++){
@@ -72,7 +69,6 @@ public class Main {
 		}
 		return arr;
 	}
-
 	static long pow(long base, int exp, int mod){
 		if(exp==1) return base;
 		if(exp==0) return 1;
