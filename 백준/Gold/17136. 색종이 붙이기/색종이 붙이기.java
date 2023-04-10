@@ -19,6 +19,7 @@ public class Main {
 		bw.write(Integer.toString(answer==26?-1:answer));
 		bw.flush();
 	}
+
 	static void recur(int cnt, int change){
 		if(change>answer) return;
 		if(cnt==0){
@@ -36,7 +37,7 @@ public class Main {
 						}
 					}
 				}
-				for(int s=1;s<size;s++){
+				for(int s=size-1;s>0;s--){
 					if(paper[s]<=0) continue;
 					for(int rr=r;rr<r+s;rr++){
 						for(int cc=c;cc<c+s;cc++){
@@ -56,6 +57,7 @@ public class Main {
 			}
 		}
 	}
+
 	static boolean isIn(int r, int c){
 		return 0<=r&&r<10&&0<=c&&c<10;
 	}
