@@ -277,6 +277,7 @@
 |5717. 상근이의 친구들|[링크](./%EB%B0%B1%EC%A4%80/Bronze/5717.%E2%80%85%EC%83%81%EA%B7%BC%EC%9D%B4%EC%9D%98%E2%80%85%EC%B9%9C%EA%B5%AC%EB%93%A4/README.md)|
 |6359. 만취한 상범|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6359.%E2%80%85%EB%A7%8C%EC%B7%A8%ED%95%9C%E2%80%85%EC%83%81%EB%B2%94/README.md)|
 |6749. Next in line|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6749.%E2%80%85Next%E2%80%85in%E2%80%85line/Next%E2%80%85in%E2%80%85line.gs)|
+|6764. Sounds fishy！|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6764.%E2%80%85Sounds%E2%80%85fishy%EF%BC%81/Sounds%E2%80%85fishy%EF%BC%81.java)|
 |6840. Who is in the middle？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6840.%E2%80%85Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F/README.md)|
 |6916. 0123456789|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6916.%E2%80%850123456789/0123456789.java)|
 |7287. 등록|[링크](./%EB%B0%B1%EC%A4%80/Bronze/7287.%E2%80%85%EB%93%B1%EB%A1%9D/README.md)|
