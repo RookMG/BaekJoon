@@ -304,6 +304,7 @@
 |18185. 라면 사기 （Small）|[링크](./%EB%B0%B1%EC%A4%80/Diamond/18185.%E2%80%85%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Small%EF%BC%89/README.md)|
 |18186. 라면 사기 （Large）|[링크](./%EB%B0%B1%EC%A4%80/Diamond/18186.%E2%80%85%EB%9D%BC%EB%A9%B4%E2%80%85%EC%82%AC%EA%B8%B0%E2%80%85%EF%BC%88Large%EF%BC%89/README.md)|
 |18821. 홀수와 짝수의 대결|[링크](./%EB%B0%B1%EC%A4%80/Diamond/18821.%E2%80%85%ED%99%80%EC%88%98%EC%99%80%E2%80%85%EC%A7%9D%EC%88%98%EC%9D%98%E2%80%85%EB%8C%80%EA%B2%B0/%ED%99%80%EC%88%98%EC%99%80%E2%80%85%EC%A7%9D%EC%88%98%EC%9D%98%E2%80%85%EB%8C%80%EA%B2%B0.py)|
+|24896. 르블랑의 트리 순회|[링크](./%EB%B0%B1%EC%A4%80/Diamond/24896.%E2%80%85%EB%A5%B4%EB%B8%94%EB%9E%91%EC%9D%98%E2%80%85%ED%8A%B8%EB%A6%AC%E2%80%85%EC%88%9C%ED%9A%8C/README.md)|
 |8464. Non－Squarefree Numbers|[링크](./%EB%B0%B1%EC%A4%80/Diamond/8464.%E2%80%85Non%EF%BC%8DSquarefree%E2%80%85Numbers/Non%EF%BC%8DSquarefree%E2%80%85Numbers.java)|
 ### 🚀 Gold
 | 문제번호 | 링크 |
