@@ -6,8 +6,8 @@ public class Main {
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken()), even = 0, odd = 0;
-        int[] visit = new int[N+1];
+        int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken());
+        int[] visit = new int[N+1], answer = new int[3];
         ArrayList<Integer>[] links = new ArrayList[N+1];
         for(int i=1;i<=N;i++) links[i] = new ArrayList<>();
         for(int i=0;i<M;i++){
@@ -16,25 +16,23 @@ public class Main {
             links[a].add(b);
             links[b].add(a);
         }
-        visit[1] = 1;
-        odd++;
+        answer[visit[1] = 1]++;
         ArrayDeque<Integer> dq = new ArrayDeque<>();
         dq.add(1);
         bfs : while(!dq.isEmpty()){
             int now = dq.pollFirst();
             for(int next:links[now]){
-                if(visit[next]==0){
-                    visit[next] = 3 - visit[now];
-                    if(visit[next]==1) odd++;
-                    else even++;
-                    dq.offerLast(next);
-                }else if(visit[next]==visit[now]){
-                    even = 0;
+                if(visit[next]==visit[now]){
+                    answer[1] = 0;
                     break bfs;
+                }
+                if(visit[next]==0){
+                    answer[visit[next] = 3 - visit[now]]++;
+                    dq.offerLast(next);
                 }
             }
         }
-        bw.write(Integer.toString(2*even*odd));
+        bw.write(Integer.toString(2*answer[1]*answer[2]));
         bw.flush();
     }
 }
