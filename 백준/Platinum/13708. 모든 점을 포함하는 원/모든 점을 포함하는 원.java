@@ -86,7 +86,6 @@ public class Main {
             st = new StringTokenizer(br.readLine());
             points.add(new Point(Double.parseDouble(st.nextToken()),Double.parseDouble(st.nextToken())));
         }
-        Collections.shuffle(points);
         bw.write(String.format("%.2f",2*mec(points,new ArrayList<>()).r));
         bw.flush();
     }
