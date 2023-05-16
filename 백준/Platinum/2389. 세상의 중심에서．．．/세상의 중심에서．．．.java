@@ -86,6 +86,7 @@ public class Main {
             st = new StringTokenizer(br.readLine());
             points.add(new Point(Double.parseDouble(st.nextToken()),Double.parseDouble(st.nextToken())));
         }
+        Collections.shuffle(points);
         Circle ans = mec(points,new ArrayList<>());
         bw.write(String.format("%f %f %f",ans.c.x,ans.c.y,ans.r));
         bw.flush();
@@ -99,7 +100,6 @@ public class Main {
                 case 3:return new Circle(R.get(0),R.get(1),R.get(2));
             }
         }
-        Collections.shuffle(P);
         List<Point> subP = P.subList(1,P.size());
         Circle c = mec(subP,new ArrayList<>(R));
         if(!c.isIn(P.get(0))){
