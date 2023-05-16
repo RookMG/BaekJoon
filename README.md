@@ -92,6 +92,7 @@
 |13118. 뉴턴과 사과|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13118.%E2%80%85%EB%89%B4%ED%84%B4%EA%B3%BC%E2%80%85%EC%82%AC%EA%B3%BC/%EB%89%B4%ED%84%B4%EA%B3%BC%E2%80%85%EC%82%AC%EA%B3%BC.java)|
 |13277. 큰 수 곱셈|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13277.%E2%80%85%ED%81%B0%E2%80%85%EC%88%98%E2%80%85%EA%B3%B1%EC%85%88/README.md)|
 |1330. 두 수 비교하기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/1330.%E2%80%85%EB%91%90%E2%80%85%EC%88%98%E2%80%85%EB%B9%84%EA%B5%90%ED%95%98%EA%B8%B0/README.md)|
+|13775. Virus|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13775.%E2%80%85Virus/README.md)|
 |14065. Gorivo|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14065.%E2%80%85Gorivo/README.md)|
 |14173. Square Pasture|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14173.%E2%80%85Square%E2%80%85Pasture/README.md)|
 |14337. Helicopter|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14337.%E2%80%85Helicopter/README.md)|
