@@ -264,6 +264,7 @@
 |3058. 짝수를 찾아라|[링크](./%EB%B0%B1%EC%A4%80/Bronze/3058.%E2%80%85%EC%A7%9D%EC%88%98%EB%A5%BC%E2%80%85%EC%B0%BE%EC%95%84%EB%9D%BC/README.md)|
 |3076. 상근이의 체스판|[링크](./%EB%B0%B1%EC%A4%80/Bronze/3076.%E2%80%85%EC%83%81%EA%B7%BC%EC%9D%B4%EC%9D%98%E2%80%85%EC%B2%B4%EC%8A%A4%ED%8C%90/README.md)|
 |3733. Shares|[링크](./%EB%B0%B1%EC%A4%80/Bronze/3733.%E2%80%85Shares/README.md)|
+|3765. Celebrity jeopardy|[링크](./%EB%B0%B1%EC%A4%80/Bronze/3765.%E2%80%85Celebrity%E2%80%85jeopardy/README.md)|
 |4101. 크냐？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/4101.%E2%80%85%ED%81%AC%EB%83%90%EF%BC%9F/README.md)|
 |4153. 직각삼각형|[링크](./%EB%B0%B1%EC%A4%80/Bronze/4153.%E2%80%85%EC%A7%81%EA%B0%81%EC%82%BC%EA%B0%81%ED%98%95/README.md)|
 |4299. AFC 윔블던|[링크](./%EB%B0%B1%EC%A4%80/Bronze/4299.%E2%80%85AFC%E2%80%85%EC%9C%94%EB%B8%94%EB%8D%98/README.md)|
