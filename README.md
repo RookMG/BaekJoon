@@ -140,6 +140,7 @@
 |20254. Site Score|[링크](./%EB%B0%B1%EC%A4%80/Bronze/20254.%E2%80%85Site%E2%80%85Score/README.md)|
 |20492. 세금|[링크](./%EB%B0%B1%EC%A4%80/Bronze/20492.%E2%80%85%EC%84%B8%EA%B8%88/README.md)|
 |21300. Bottle Return|[링크](./%EB%B0%B1%EC%A4%80/Bronze/21300.%E2%80%85Bottle%E2%80%85Return/Bottle%E2%80%85Return.py)|
+|21354. Äpplen och päron|[링크](./%EB%B0%B1%EC%A4%80/Bronze/21354.%E2%80%85%C3%84pplen%E2%80%85och%E2%80%85p%C3%A4ron/%C3%84pplen%E2%80%85och%E2%80%85p%C3%A4ron.java)|
 |21598. SciComLove|[링크](./%EB%B0%B1%EC%A4%80/Bronze/21598.%E2%80%85SciComLove/README.md)|
 |2163. 초콜릿 자르기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2163.%E2%80%85%EC%B4%88%EC%BD%9C%EB%A6%BF%E2%80%85%EC%9E%90%EB%A5%B4%EA%B8%B0/README.md)|
 |22193. Multiply|[링크](./%EB%B0%B1%EC%A4%80/Bronze/22193.%E2%80%85Multiply/README.md)|
