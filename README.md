@@ -312,6 +312,7 @@
 ### 🚀 Diamond
 | 문제번호 | 링크 |
 | ----- | ----- |
+|10854. Divisions|[링크](./%EB%B0%B1%EC%A4%80/Diamond/10854.%E2%80%85Divisions/Divisions.py)|
 |14853. 동전 던지기|[링크](./%EB%B0%B1%EC%A4%80/Diamond/14853.%E2%80%85%EB%8F%99%EC%A0%84%E2%80%85%EB%8D%98%EC%A7%80%EA%B8%B0/README.md)|
 |14958. Rock Paper Scissors|[링크](./%EB%B0%B1%EC%A4%80/Diamond/14958.%E2%80%85Rock%E2%80%85Paper%E2%80%85Scissors/README.md)|
 |16880. 룩， 비숍， 킹， 나이트， 궁전 게임|[링크](./%EB%B0%B1%EC%A4%80/Diamond/16880.%E2%80%85%EB%A3%A9%EF%BC%8C%E2%80%85%EB%B9%84%EC%88%8D%EF%BC%8C%E2%80%85%ED%82%B9%EF%BC%8C%E2%80%85%EB%82%98%EC%9D%B4%ED%8A%B8%EF%BC%8C%E2%80%85%EA%B6%81%EC%A0%84%E2%80%85%EA%B2%8C%EC%9E%84/README.md)|
