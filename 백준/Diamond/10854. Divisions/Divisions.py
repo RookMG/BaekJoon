@@ -75,19 +75,18 @@ def power(x, y, p):
     return res
 
 n = int(input())
-pq = []
-d = {}
-while n > 1:
-    div = pollard_rho(n)
-    heapq.heappush(pq, div)
-    n = n // div
-while pq:
-    num = heapq.heappop(pq)
-    if num in d:
-        d[num] = d[num] + 1
-    else:
-        d[num] = 1
-ans = 1
-for i in d.values():
-    ans *= i+1
-print(ans)
+if n==1:
+    print(1)
+else:
+    d = {}
+    while n > 1:
+        div = pollard_rho(n)
+        if div in d:
+            d[div] = d[div] + 1
+        else:
+            d[div] = 1
+        n = n // div
+    ans = 1
+    for i in d.values():
+        ans *= i+1
+    print(ans)
