@@ -1,7 +1,6 @@
 # https://www.geeksforgeeks.org/pollards-rho-algorithm-prime-factorization/
 # https://seokjin2.tistory.com/5
-import sys, random, heapq
-sys.setrecursionlimit(10 ** 6)
+import random, heapq
 
 
 def pollard_rho(n):
