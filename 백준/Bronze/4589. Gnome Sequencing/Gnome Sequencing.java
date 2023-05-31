@@ -6,11 +6,10 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
-        int N = Integer.parseInt(br.readLine());
         sb.append("Gnomes:");
-        for(int i=0;i<N;i++){
+        for(int i= Integer.parseInt(br.readLine()), a, b, c;i>0;--i){
             st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+            a = Integer.parseInt(st.nextToken()); b = Integer.parseInt(st.nextToken()); c = Integer.parseInt(st.nextToken());
             sb.append((a<b&&b<c)||(a>b&&b>c)?"\nOrdered":"\nUnordered");
         }
         bw.write(sb.toString());
