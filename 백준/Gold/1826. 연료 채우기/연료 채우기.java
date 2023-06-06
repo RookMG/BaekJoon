@@ -6,7 +6,12 @@ public class Main {
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
         int N = Integer.parseInt(br.readLine()), ans = 0;
-        PriorityQueue<int[]> stops = new PriorityQueue<>((o1, o2) -> Integer.compare(o1[0],o2[0]));
+        PriorityQueue<int[]> stops = new PriorityQueue<>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0]-o2[0];
+            }
+        });
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for(int i=0;i<N;i++){
             st = new StringTokenizer(br.readLine());
