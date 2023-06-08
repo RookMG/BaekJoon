@@ -1,10 +1,8 @@
 dice = list(map(int,input().split()))
-dup = 4 - len(list(set(dice)))
-if dup==3:
-    print(10000 + 1000*dice[0])
-elif dup==1:
-    print(100*max(dice))
-elif dice.count(dice[0])==2:
-    print(1000+100*dice[0])
+dset = list(set(dice))
+if len(dset)==3:
+    print(max(dice)*100)
+elif len(dset)==2:
+    print(1000 + (sum(dice) - sum(dset)) * 100)
 else:
-    print(1000+100*dice[1])
+    print(10000 + dset[0] * 1000)
