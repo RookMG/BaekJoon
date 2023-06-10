@@ -331,6 +331,7 @@
 |2626. 헬기착륙장|[링크](./%EB%B0%B1%EC%A4%80/Diamond/2626.%E2%80%85%ED%97%AC%EA%B8%B0%EC%B0%A9%EB%A5%99%EC%9E%A5/%ED%97%AC%EA%B8%B0%EC%B0%A9%EB%A5%99%EC%9E%A5.java)|
 |2899. 구슬 없애기|[링크](./%EB%B0%B1%EC%A4%80/Diamond/2899.%E2%80%85%EA%B5%AC%EC%8A%AC%E2%80%85%EC%97%86%EC%95%A0%EA%B8%B0/%EA%B5%AC%EC%8A%AC%E2%80%85%EC%97%86%EC%95%A0%EA%B8%B0.java)|
 |8464. Non－Squarefree Numbers|[링크](./%EB%B0%B1%EC%A4%80/Diamond/8464.%E2%80%85Non%EF%BC%8DSquarefree%E2%80%85Numbers/README.md)|
+|9158. Super Star|[링크](./%EB%B0%B1%EC%A4%80/Diamond/9158.%E2%80%85Super%E2%80%85Star/Super%E2%80%85Star.java)|
 ### 🚀 Gold
 | 문제번호 | 링크 |
 | ----- | ----- |
