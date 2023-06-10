@@ -17,7 +17,7 @@ public class Main {
         x/=N;
         y/=N;
         z/=N;
-        for(int i=0, idx;i<100000;i++) {
+        for(int i=0, idx;i<33333;i++) {
             idx = 1;
             r = 0;
             for(int j=1;j<=N;j++) {
