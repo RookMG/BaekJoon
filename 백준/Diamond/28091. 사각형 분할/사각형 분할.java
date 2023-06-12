@@ -7,25 +7,12 @@ public class Main {
             this.x = x;
             this.y = y;
         }
-        long dist(Point p){
-            return (x-p.x)*(x-p.x)+(y-p.y)*(y-p.y);
-        }
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
-        }
     }
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer st;
     static long outProduct(Point p1, Point p2, Point p3){
         return (p3.x-p1.x)*(p1.y-p2.y)-(p1.x-p2.x)*(p3.y-p1.y);
-    }
-    static long outProduct(Point p1, Point p2, Point p3, Point p4){
-        return (p4.x+p2.x-p3.x-p1.x)*(p1.y-p2.y)-(p1.x-p2.x)*(p4.y+p2.y-p3.y-p1.y);
     }
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
@@ -74,9 +61,17 @@ public class Main {
         double ans = 0;
         for(int i=0;i<shell.size()-1;i++){
             for(int j=i+2;j<shell.size();j++){
-                long lmax = 0, rmax = 0;
-                for(int k=i+1;k<j;k++) lmax = Math.max(lmax,Math.abs(outProduct(cal.get(i),cal.get(k),cal.get(j))));
-                for(int k=j+1;k<i+cal.size();k++) rmax = Math.max(rmax,Math.abs(outProduct(cal.get(i),cal.get(k%cal.size()),cal.get(j))));
+                long lmax = 0, rmax = 0, tmp;
+                for(int k=i+1;k<j;k++){
+                    tmp = Math.abs(outProduct(cal.get(i),cal.get(k),cal.get(j)));
+                    if(tmp<lmax) break;
+                    lmax = tmp;
+                }
+                for(int k=j+1;k<i+cal.size();k++){
+                    tmp = Math.abs(outProduct(cal.get(i),cal.get(k%cal.size()),cal.get(j)));
+                    if(tmp<rmax) break;
+                    rmax = tmp;
+                }
                 ans = Math.max(ans,((lmax+rmax)/4.0)*((lmax+rmax)/4.0));
             }
         }
