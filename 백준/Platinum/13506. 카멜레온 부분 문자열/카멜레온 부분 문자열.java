@@ -1,10 +1,8 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class Main{
+import java.io.*;
+import java.util.*;
+public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static char[] line, key;
     static int[] pi;
     static int l;
@@ -12,14 +10,16 @@ public class Main{
     public static void main(String[] args) throws Exception{
         key = line = br.readLine().toCharArray();
         getPi();
+        String ans = "-1";
         for(l=pi[key.length-1];l>0;l--){
             kmp();
             if(answer.size()>2&&answer.get(answer.size()-1)+l==line.length) {
-                System.out.println(Arrays.copyOf(key,l));
-                return;
+                ans = new String(Arrays.copyOf(key,l));
+                break;
             }
         }
-        System.out.println(-1);
+        bw.write(ans);
+        bw.flush();
     }
     static void getPi(){
         pi = new int[key.length];
