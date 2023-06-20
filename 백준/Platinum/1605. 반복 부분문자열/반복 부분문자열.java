@@ -1,4 +1,6 @@
 // https://koosaga.com/125
+// https://plzrun.tistory.com/entry/Suffix-Array-ONlogNlgN%EA%B3%BC-ONlogN-%EA%B5%AC%ED%98%84-%EB%B0%8F-%EC%84%A4%EB%AA%85
+// https://gumgood.github.io/suffix-array-and-lcp
 import java.io.*;
 import java.util.*;
 public class Main {
