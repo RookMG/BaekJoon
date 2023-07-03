@@ -8,24 +8,25 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken()), K = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        int[] arr = new int[N], withk = new int[N], arrRev = new int[N], withkRev = new int[N];
+        int[] arr = new int[N], arrRev = new int[N];
         for(int i=0;i<N;i++){
-            withk[i] = (arr[i] = Integer.parseInt(st.nextToken())) + K*i;
-            withkRev[N-1-i] = (arrRev[N-1-i] = arr[i]) + K*(N-1-i);
+            arrRev[N-1-i] += arr[i] = Integer.parseInt(st.nextToken());
+            arr[i] += i*K;
+            arrRev[i] += i*K;
         }
-        int ans = -Integer.MAX_VALUE, idx = 0, max = withk[0];
+        int ans = -Integer.MAX_VALUE, idx = 0, max = arr[0];
         for(int i=1;i<N;i++){
-            ans = Math.max(ans,withk[idx]-withk[i]);
-            if(max>withk[i]) continue;
-            max = withk[i];
+            ans = Math.max(ans,arr[idx]-arr[i]);
+            if(max>arr[i]) continue;
+            max = arr[i];
             idx = i;
         }
         idx = 0;
-        max = withkRev[0];
+        max = arrRev[0];
         for(int i=1;i<N;i++){
-            ans = Math.max(ans,withkRev[idx]-withkRev[i]);
-            if(max>withkRev[i]) continue;
-            max = withkRev[i];
+            ans = Math.max(ans,arrRev[idx]-arrRev[i]);
+            if(max>arrRev[i]) continue;
+            max = arrRev[i];
             idx = i;
         }
         bw.write(Integer.toString(ans));
