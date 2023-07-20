@@ -324,6 +324,7 @@
 |10854. Divisions|[링크](./%EB%B0%B1%EC%A4%80/Diamond/10854.%E2%80%85Divisions/Divisions.py)|
 |11930. Smallest Enclosing Sphere|[링크](./%EB%B0%B1%EC%A4%80/Diamond/11930.%E2%80%85Smallest%E2%80%85Enclosing%E2%80%85Sphere/Smallest%E2%80%85Enclosing%E2%80%85Sphere.java)|
 |12766. 지사 배정|[링크](./%EB%B0%B1%EC%A4%80/Diamond/12766.%E2%80%85%EC%A7%80%EC%82%AC%E2%80%85%EB%B0%B0%EC%A0%95/%EC%A7%80%EC%82%AC%E2%80%85%EB%B0%B0%EC%A0%95.java)|
+|12858. Range GCD|[링크](./%EB%B0%B1%EC%A4%80/Diamond/12858.%E2%80%85Range%E2%80%85GCD/Range%E2%80%85GCD.java)|
 |13926. gcd（n， k） ＝ 1|[링크](./%EB%B0%B1%EC%A4%80/Diamond/13926.%E2%80%85gcd%EF%BC%88n%EF%BC%8C%E2%80%85k%EF%BC%89%E2%80%85%EF%BC%9D%E2%80%851/README.md)|
 |14853. 동전 던지기|[링크](./%EB%B0%B1%EC%A4%80/Diamond/14853.%E2%80%85%EB%8F%99%EC%A0%84%E2%80%85%EB%8D%98%EC%A7%80%EA%B8%B0/README.md)|
 |14958. Rock Paper Scissors|[링크](./%EB%B0%B1%EC%A4%80/Diamond/14958.%E2%80%85Rock%E2%80%85Paper%E2%80%85Scissors/README.md)|
