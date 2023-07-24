@@ -25,10 +25,12 @@ public class Main {
         Arrays.fill(cost, Integer.MAX_VALUE);
         cost[start] = 0;
         pq.offer(new int[]{start,0});
+        int[] now, next;
         while(!pq.isEmpty()){
-            int[] now = pq.poll();
+            now = pq.poll();
             if(cost[now[0]]<now[1]) continue;
-            for(int[] next : links.get(now[0])){
+            for(int i=links.get(now[0]).size()-1;i>=0;i--){
+                next = links.get(now[0]).get(i);
                 if(cost[next[0]]>now[1]+next[1]) pq.offer(new int[]{next[0], cost[next[0]] = now[1]+next[1]});
             }
         }
