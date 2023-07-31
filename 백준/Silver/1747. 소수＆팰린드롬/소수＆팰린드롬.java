@@ -15,7 +15,7 @@ public class Main {
         }
         int n = Integer.parseInt(br.readLine());
         for(;;n++){
-            while(!primes[n]) n++;
+            for(;!primes[n];n++);
             sb.setLength(0);
             sb.append(n);
             sb.reverse();
