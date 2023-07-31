@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -7,15 +6,14 @@ public class Main {
     static final int MAX = 1003002;
     public static void main(String[] args) throws Exception{
         boolean[] primes = new boolean[MAX];
-        Arrays.fill(primes,true);
-        primes[1]=false;
+        primes[1]=true;
         for(int i=2,end=(int)Math.sqrt(MAX)+1;i<=end;i++) {
-            if(!primes[i]) continue;
-            for(int j=2*i;j<MAX;j+=i) primes[j]=false;
+            if(primes[i]) continue;
+            for(int j=2*i;j<MAX;j+=i) primes[j]=true;
         }
         int n = Integer.parseInt(br.readLine());
         for(;;n++){
-            for(;!primes[n];n++);
+            for(;primes[n];n++);
             sb.setLength(0);
             sb.append(n);
             sb.reverse();
