@@ -1,25 +1,12 @@
 import java.io.*;
+import java.util.*;
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static StringBuilder sb = new StringBuilder();
-    static final int MAX = 1003002;
+    static final int[] p = {2,3,5,7,11,101,131,151,181,191,313,353,373,383,727,757,787,797,919,929,10301,10501,10601,11311,11411,12421,12721,12821,13331,13831,13931,14341,14741,15451,15551,16061,16361,16561,16661,17471,17971,18181,18481,19391,19891,19991,30103,30203,30403,30703,30803,31013,31513,32323,32423,33533,34543,34843,35053,35153,35353,35753,36263,36563,37273,37573,38083,38183,38783,39293,70207,70507,70607,71317,71917,72227,72727,73037,73237,73637,74047,74747,75557,76367,76667,77377,77477,77977,78487,78787,78887,79397,79697,79997,90709,91019,93139,93239,93739,94049,94349,94649,94849,94949,95959,96269,96469,96769,97379,97579,97879,98389,98689,1003001};
     public static void main(String[] args) throws Exception{
-        boolean[] primes = new boolean[MAX];
-        primes[1]=true;
-        for(int i=2,end=(int)Math.sqrt(MAX)+1;i<=end;i++) {
-            if(primes[i]) continue;
-            for(int j=2*i;j<MAX;j+=i) primes[j]=true;
-        }
-        int n = Integer.parseInt(br.readLine());
-        for(;;n++){
-            for(;primes[n];n++);
-            sb.setLength(0);
-            sb.append(n);
-            sb.reverse();
-            if(Integer.toString(n).equals(sb.toString())) break;
-        }
-        bw.write(Integer.toString(n));
+        int n = Arrays.binarySearch(p, Integer.parseInt(br.readLine()));
+        bw.write(Integer.toString(n<0?p[-n-1]:p[n]));
         bw.flush();
     }
 }
