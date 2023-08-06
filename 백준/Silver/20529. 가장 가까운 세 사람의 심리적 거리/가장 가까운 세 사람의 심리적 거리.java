@@ -6,7 +6,7 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
     static String[] mbti;
-    static int[] selected = new int[3];
+    static String[] selected = new String[3];
     static int min;
     public static void main(String[] args) throws Exception {
         for(int T = Integer.parseInt(br.readLine());T>0;T--){
@@ -27,20 +27,20 @@ public class Main {
     }
     static void recur(int depth, int start){
         if(depth==3){
-            min = Math.min(min,update());
+            update();
             return;
         }
         for(int i=start;i<mbti.length;i++){
-            selected[depth] = i;
+            selected[depth] = mbti[i];
             recur(depth+1,i+1);
         }
     }
-    static int update(){
+    static void update(){
         int ret = 0;
         for(int i=0;i<4;i++){
-            if(mbti[selected[0]].charAt(i)==mbti[selected[1]].charAt(i)&&mbti[selected[0]].charAt(i)==mbti[selected[2]].charAt(i)) continue;
+            if(selected[0].charAt(i)==selected[1].charAt(i)&&selected[0].charAt(i)==selected[2].charAt(i)) continue;
             ret += 2;
         }
-        return ret;
+        min = Math.min(min,ret);
     }
 }
