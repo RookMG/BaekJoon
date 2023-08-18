@@ -4,11 +4,11 @@
 
 ### 성능 요약
 
-메모리: 117400 KB, 시간: 5424 ms
+메모리: 88408 KB, 시간: 1288 ms
 
 ### 분류
 
-베이즈 정리(bayes), 미적분학(calculus), 조합론(combinatorics), 수학(math), 확률론(probability), 통계학(statistics)
+베이즈 정리, 미적분학, 조합론, 수학, 확률론
 
 ### 문제 설명
 
