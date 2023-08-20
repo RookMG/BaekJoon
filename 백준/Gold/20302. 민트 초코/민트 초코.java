@@ -11,18 +11,12 @@ public class Main {
             if(notPrime[i]) continue;
             for(int j=i<<1;j<=MAX;j+=i) notPrime[j] = true;
         }
-        ArrayList<Integer> primes = new ArrayList<>();
-        for(int i=2;i<=MAX;i++){
-            if(notPrime[i]) continue;
-            primes.add(i);
-        }
         int[] cnt = new int[MAX+1];
         int N = Integer.parseInt(br.readLine());
         st = new StringTokenizer("* "+br.readLine());
-        for(int i=0;i<N;i++){
+        for(int i=0, num;i<N;i++){
             boolean isMul = st.nextToken().charAt(0)=='*';
-            int num = Integer.parseInt(st.nextToken());
-            if(num<0) num=-num;
+            if((num = Integer.parseInt(st.nextToken()))<0) num=-num;
             else if(num==0){
                 bw.write("mint chocolate");
                 bw.flush();
@@ -39,11 +33,11 @@ public class Main {
                 break;
             }
             int now = i;
-            for(int j=0, prime;now>1;j++){
-                prime = primes.get(j);
-                while(now%prime==0) {
-                    cnt[prime] += cnt[i];
-                    now /= prime;
+            for(int j=2;now>1;j++){
+                if(notPrime[j]) continue;
+                while(now%j==0) {
+                    cnt[j] += cnt[i];
+                    now /= j;
                 }
             }
             cnt[i] = 0;
