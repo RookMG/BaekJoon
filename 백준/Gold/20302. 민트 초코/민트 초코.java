@@ -7,7 +7,7 @@ public class Main {
     static final int MAX = 100_000;
     public static void main(String[] args) throws Exception {
         boolean[] notPrime = new boolean[MAX+1];
-        for(int i=2;i<=380;i++){
+        for(int i=2;i<=370;i++){
             if(notPrime[i]) continue;
             for(int j=i<<1;j<=MAX;j+=i) notPrime[j] = true;
         }
@@ -16,13 +16,12 @@ public class Main {
         st = new StringTokenizer("* "+br.readLine());
         for(int i=0, num;i<N;i++){
             boolean isMul = st.nextToken().charAt(0)=='*';
-            if((num = Integer.parseInt(st.nextToken()))<0) num=-num;
-            else if(num==0){
+            if((num = Integer.parseInt(st.nextToken()))==0){
                 bw.write("mint chocolate");
                 bw.flush();
                 return;
-            }
-            cnt[num]+=isMul?1:-1;
+            }else if(num>0) cnt[num]+=isMul?1:-1;
+            else cnt[-num]+=isMul?1:-1;
         }
         String ans = "mint chocolate";
         for(int i=MAX;i>=2;i--){
