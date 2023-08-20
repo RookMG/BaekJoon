@@ -7,7 +7,7 @@ public class Main {
     static final int MAX = 100_000;
     public static void main(String[] args) throws Exception {
         boolean[] notPrime = new boolean[MAX+1];
-        for(int i=2;i<=(int)Math.sqrt(MAX)+1;i++){
+        for(int i=2;i<=380;i++){
             if(notPrime[i]) continue;
             for(int j=i<<1;j<=MAX;j+=i) notPrime[j] = true;
         }
@@ -35,10 +35,7 @@ public class Main {
             int now = i;
             for(int j=2;now>1;j++){
                 if(notPrime[j]) continue;
-                while(now%j==0) {
-                    cnt[j] += cnt[i];
-                    now /= j;
-                }
+                for(;now%j==0;cnt[j] += cnt[i],now /= j);
             }
             cnt[i] = 0;
         }
