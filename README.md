@@ -323,6 +323,7 @@
 |8545. Zadanie próbne|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8545.%E2%80%85Zadanie%E2%80%85pr%C3%B3bne/Zadanie%E2%80%85pr%C3%B3bne.py)|
 |8871. Zadanie próbne 2|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8871.%E2%80%85Zadanie%E2%80%85pr%C3%B3bne%E2%80%852/README.md)|
 |8958. OX퀴즈|[링크](./%EB%B0%B1%EC%A4%80/Bronze/8958.%E2%80%85OX%ED%80%B4%EC%A6%88/OX%ED%80%B4%EC%A6%88.py)|
+|9085. 더하기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9085.%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0/README.md)|
 |9086. 문자열|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9086.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4/README.md)|
 |9316. Hello Judge|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9316.%E2%80%85Hello%E2%80%85Judge/README.md)|
 |9498. 시험 성적|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9498.%E2%80%85%EC%8B%9C%ED%97%98%E2%80%85%EC%84%B1%EC%A0%81/%EC%8B%9C%ED%97%98%E2%80%85%EC%84%B1%EC%A0%81.py)|
