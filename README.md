@@ -100,6 +100,7 @@
 |1330. 두 수 비교하기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/1330.%E2%80%85%EB%91%90%E2%80%85%EC%88%98%E2%80%85%EB%B9%84%EA%B5%90%ED%95%98%EA%B8%B0/README.md)|
 |13752. 히스토그램|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13752.%E2%80%85%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8/README.md)|
 |13775. Virus|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13775.%E2%80%85Virus/Virus.java)|
+|13866. 팀 나누기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/13866.%E2%80%85%ED%8C%80%E2%80%85%EB%82%98%EB%88%84%EA%B8%B0/%ED%8C%80%E2%80%85%EB%82%98%EB%88%84%EA%B8%B0.java)|
 |14065. Gorivo|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14065.%E2%80%85Gorivo/README.md)|
 |14173. Square Pasture|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14173.%E2%80%85Square%E2%80%85Pasture/README.md)|
 |14337. Helicopter|[링크](./%EB%B0%B1%EC%A4%80/Bronze/14337.%E2%80%85Helicopter/Helicopter.vb)|
