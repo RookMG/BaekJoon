@@ -226,6 +226,7 @@
 |26209. Intercepting Information|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26209.%E2%80%85Intercepting%E2%80%85Information/Intercepting%E2%80%85Information.py)|
 |26307. Correct|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26307.%E2%80%85Correct/README.md)|
 |26489. Gum Gum for Jay Jay|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26489.%E2%80%85Gum%E2%80%85Gum%E2%80%85for%E2%80%85Jay%E2%80%85Jay/Gum%E2%80%85Gum%E2%80%85for%E2%80%85Jay%E2%80%85Jay.py)|
+|26495. Big Number|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26495.%E2%80%85Big%E2%80%85Number/Big%E2%80%85Number.py)|
 |26545. Mathematics|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26545.%E2%80%85Mathematics/README.md)|
 |26574. Copier|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26574.%E2%80%85Copier/README.md)|
 |26575. Pups|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26575.%E2%80%85Pups/Pups.py)|
