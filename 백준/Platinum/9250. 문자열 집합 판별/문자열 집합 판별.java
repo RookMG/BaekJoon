@@ -38,11 +38,13 @@ public class Main {
             }
             dict.add(word);
             now.isEnd = true;
+        }
 
+        public void getFail(){
             ArrayDeque<Node> deque = new ArrayDeque<>();
             deque.add(root);
             while(!deque.isEmpty()){
-                now = deque.poll();
+                Node now = deque.poll();
                 for(Node next:now.child){
                     if(next==null) continue;
                     Node prev  = now.fail;
@@ -81,7 +83,7 @@ public class Main {
         for(int i= Integer.parseInt(br.readLine());i>0;i--){
             t.addWord(br.readLine());
         }
-
+        t.getFail();
 //        t.root.print(0);
 
         for(int i= Integer.parseInt(br.readLine());i>0;i--){
