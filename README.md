@@ -241,6 +241,7 @@
 |26574. Copier|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26574.%E2%80%85Copier/Copier.py)|
 |26575. Pups|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26575.%E2%80%85Pups/Pups.py)|
 |26711. A＋B|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26711.%E2%80%85A%EF%BC%8BB/A%EF%BC%8BB.gs)|
+|26742. Skarpetki|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26742.%E2%80%85Skarpetki/Skarpetki.java)|
 |2675. 문자열 반복|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2675.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EB%B0%98%EB%B3%B5/%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EB%B0%98%EB%B3%B5.py)|
 |26766. Serca|[링크](./%EB%B0%B1%EC%A4%80/Bronze/26766.%E2%80%85Serca/README.md)|
 |27110. 특식 배부|[링크](./%EB%B0%B1%EC%A4%80/Bronze/27110.%E2%80%85%ED%8A%B9%EC%8B%9D%E2%80%85%EB%B0%B0%EB%B6%80/%ED%8A%B9%EC%8B%9D%E2%80%85%EB%B0%B0%EB%B6%80.java)|
