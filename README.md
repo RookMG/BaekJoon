@@ -333,6 +333,7 @@
 |6763. Speed fines are not fine！|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6763.%E2%80%85Speed%E2%80%85fines%E2%80%85are%E2%80%85not%E2%80%85fine%EF%BC%81/Speed%E2%80%85fines%E2%80%85are%E2%80%85not%E2%80%85fine%EF%BC%81.java)|
 |6764. Sounds fishy！|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6764.%E2%80%85Sounds%E2%80%85fishy%EF%BC%81/Sounds%E2%80%85fishy%EF%BC%81.java)|
 |6840. Who is in the middle？|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6840.%E2%80%85Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F/Who%E2%80%85is%E2%80%85in%E2%80%85the%E2%80%85middle%EF%BC%9F.py)|
+|6888. Terms of Office|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6888.%E2%80%85Terms%E2%80%85of%E2%80%85Office/Terms%E2%80%85of%E2%80%85Office.java)|
 |6916. 0123456789|[링크](./%EB%B0%B1%EC%A4%80/Bronze/6916.%E2%80%850123456789/0123456789.java)|
 |7287. 등록|[링크](./%EB%B0%B1%EC%A4%80/Bronze/7287.%E2%80%85%EB%93%B1%EB%A1%9D/%EB%93%B1%EB%A1%9D.py)|
 |7567. 그릇|[링크](./%EB%B0%B1%EC%A4%80/Bronze/7567.%E2%80%85%EA%B7%B8%EB%A6%87/%EA%B7%B8%EB%A6%87.py)|
