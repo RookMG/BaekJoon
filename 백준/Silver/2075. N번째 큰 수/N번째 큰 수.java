@@ -7,14 +7,18 @@ public class Main {
     public static void main(String[] args) throws Exception {
         int N = Integer.parseInt(br.readLine());
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for(int r=0;r<N;r++){
+        st = new StringTokenizer(br.readLine());
+        for(int c=0;c<N;c++) pq.offer(Integer.parseInt(st.nextToken()));
+        for(int r=1;r<N;r++){
             st = new StringTokenizer(br.readLine());
             for(int c=0;c<N;c++){
-                pq.offer(-Integer.parseInt(st.nextToken()));
+                int num = Integer.parseInt(st.nextToken());
+                if(pq.peek()>num) continue;
+                pq.poll();
+                pq.offer(num);
             }
         }
-        for(int i=1;i<N;i++) pq.poll();
-        bw.write((Integer.toString(-pq.poll())));
+        bw.write((Integer.toString(pq.poll())));
         bw.flush();
     }
 }
