@@ -18,26 +18,27 @@ public class Main {
         bw.write(Integer.toString(ans));
         bw.flush();
     }
-    static void recur(int order, int score){
+    static void recur(int order, int now){
+        if(now+N-order+1<ans) return;
         if(order==N){
-            ans = Math.max(ans, score);
+            ans = Math.max(ans, now);
             return;
         }
         if(egg[order][0]<=0){
-            recur(order+1,score);
+            recur(order+1,now);
             return;
         }
         boolean visit = false;
-        for(int i=0, nscore;i<N;i++){
+        for(int i=0, next;i<N;i++){
             if(i==order||egg[i][0]<=0) continue;
-            nscore = score;
-            if((egg[i][0] -= egg[order][1])<=0) nscore++;
-            if((egg[order][0] -= egg[i][1])<=0) nscore++;
+            next = now;
+            if((egg[i][0] -= egg[order][1])<=0) next++;
+            if((egg[order][0] -= egg[i][1])<=0) next++;
             visit = true;
-            recur(order+1,nscore);
+            recur(order+1,next);
             egg[i][0] += egg[order][1];
             egg[order][0] += egg[i][1];
         }
-        if(!visit) recur(order+1,score);
+        if(!visit) recur(order+1,now);
     }
 }
