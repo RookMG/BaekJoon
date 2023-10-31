@@ -11,10 +11,10 @@ public class Main {
         void dfs(int cost){
             visit = true;
             int cnt = 0;
-            for(int[] next:child){
-                if(nodes[next[0]].visit) continue;
+            for(int i=0;i<child.size();i++){
+                if(nodes[child.get(i)[0]].visit) continue;
                 cnt++;
-                nodes[next[0]].dfs(cost+next[1]);
+                nodes[child.get(i)[0]].dfs(cost+child.get(i)[1]);
             }
             branch = Math.max(branch, cost);
             if(cnt!=1) pole = cost;
