@@ -6,16 +6,17 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
-        int[] arr = new int[Integer.parseInt(br.readLine())];
+        int N = Integer.parseInt(br.readLine());
+        int[] arr = new int[N];
         st = new StringTokenizer(br.readLine());
-        for(int i=1;i<=arr.length;i++){
+        for(int i=1;i<=N;i++){
             int now = Integer.parseInt(st.nextToken());
-            for(int j=0;j<arr.length;j++){
+            for(int j=0;j<N;j++){
                 if(arr[j]!=0) continue;
                 if(now--==0) arr[j] = i;
             }
         }
-        for (int num : arr) sb.append(num).append(' ');
+        for(int i=0;i<N;i++) sb.append(arr[i]).append(' ');
         bw.write(sb.toString());
         bw.flush();
     }
