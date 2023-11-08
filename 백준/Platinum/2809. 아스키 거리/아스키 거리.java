@@ -69,7 +69,7 @@ public class Main {
             }
         }
     }
-    static final int SIZE = 1250;
+    static final int SIZE = 1667;
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static boolean[] found;
