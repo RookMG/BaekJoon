@@ -65,18 +65,18 @@ public class Main {
                 char c = keyword.charAt(i);
                 while(now!=root&&now.child[c-'a']==null) now = now.fail;
                 now = now.child[c-'a']==null?now:now.child[c-'a'];
-                for(int j=0;j<now.isEnd;j++) found[i-j] = true;
+                len[i] = Math.max(len[i],now.isEnd);
             }
         }
     }
     static final int SIZE = 2500;
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static boolean[] found;
+    static int[] len;
     public static void main(String[] args) throws Exception {
         int N = Integer.parseInt(br.readLine());
         String target = br.readLine();
-        found = new boolean[N];
+        len = new int[N];
         int M = Integer.parseInt(br.readLine());
         for(int idx = 0;idx<M;) {
             Trie t = new Trie();
@@ -85,7 +85,11 @@ public class Main {
             t.ahoCorasick(target);
         }
         int ans = 0;
-        for(boolean b:found) if(!b) ans++;
+        for(int i=N-1;i>0;i--){
+            if(len[i]==0) ans++;
+            len[i-1] = Math.max(len[i-1],len[i]-1);
+        }
+        if(len[0]==0) ans++;
         bw.write(Integer.toString(ans));
         bw.flush();
     }
