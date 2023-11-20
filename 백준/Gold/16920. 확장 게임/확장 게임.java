@@ -39,7 +39,7 @@ public class Main {
                             if(!isIn(nr,nc)||map[nr][nc]!='.') continue;
                             progress = true;
                             dqs[p-1].offerLast(new int[]{nr,nc});
-                            map[nr][nc] = (char)('0'+p);
+                            map[nr][nc] = '#';
                             cnt[p-1]++;
                         }
                     }
