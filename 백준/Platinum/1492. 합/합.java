@@ -10,12 +10,11 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         long N = Long.parseLong(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
-        long[] dp = new long[K+1], com = new long[K+2];
-        Arrays.fill(com,1);
+        long[] dp = new long[K+1], com = new long[K+1];
         dp[0] = N;
+        for(int i=0;i<=K;i++) com[i] = i+1;
         for(int i=1;i<=K;i++){
             long psum = N;
-            com[i] = (com[i]+com[i-1])%MOD;
             for(int j=i-1;j>0;j--){
                 com[j] = (com[j]+com[j-1])%MOD;
                 psum = (psum + com[j]*dp[j]%MOD)%MOD;
@@ -25,7 +24,6 @@ public class Main {
         bw.write(Long.toString(dp[K]));
         bw.flush();
     }
-
     static long pow(long base, long exp){
         if(exp==0) return 1;
         else if(exp == 1) return base;
