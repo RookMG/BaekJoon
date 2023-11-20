@@ -8,8 +8,7 @@ public class Main {
     static long MOD = 1_000_000_007;
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
-        long N = Long.parseLong(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken()), K = Integer.parseInt(st.nextToken());
         long[] dp = new long[K+1], com = new long[K+1];
         dp[0] = N;
         for(int i=0;i<=K;i++) com[i] = i+1;
