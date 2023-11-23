@@ -356,6 +356,7 @@
 | 문제번호 | 링크 |
 | ----- | ----- |
 |10854. Divisions|[링크](./%EB%B0%B1%EC%A4%80/Diamond/10854.%E2%80%85Divisions/README.md)|
+|1150. 백업|[링크](./%EB%B0%B1%EC%A4%80/Diamond/1150.%E2%80%85%EB%B0%B1%EC%97%85/README.md)|
 |11930. Smallest Enclosing Sphere|[링크](./%EB%B0%B1%EC%A4%80/Diamond/11930.%E2%80%85Smallest%E2%80%85Enclosing%E2%80%85Sphere/README.md)|
 |12766. 지사 배정|[링크](./%EB%B0%B1%EC%A4%80/Diamond/12766.%E2%80%85%EC%A7%80%EC%82%AC%E2%80%85%EB%B0%B0%EC%A0%95/README.md)|
 |12858. Range GCD|[링크](./%EB%B0%B1%EC%A4%80/Diamond/12858.%E2%80%85Range%E2%80%85GCD/Range%E2%80%85GCD.java)|
