@@ -42,20 +42,16 @@ public class Main {
             for(int now = i;!visit[now];now = next[now]){
                 visit[now] = true;
                 if(next[now]==-1) break;
-                int ap = findP(now), bp = findP(next[now]);
-                if(ap==bp){
+                if(parent[now]==parent[next[now]]){
                     int min = cost[now];
                     for(int s = next[now];s!=now;s=next[s]) min = Math.min(min,cost[s]);
                     ans += min;
                     break;
                 }
-                parent[Math.max(ap,bp)] = Math.min(ap,bp);
+                parent[next[now]] = parent[now];
             }
         }
         bw.write(Integer.toString(ans));
         bw.flush();
-    }
-    static int findP(int num){
-        return parent[num] = num==parent[num]?num:findP(parent[num]);
     }
 }
