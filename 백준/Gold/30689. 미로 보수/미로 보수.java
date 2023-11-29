@@ -5,15 +5,14 @@ public class Main {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer st;
     static int R, C, ans;
-    static int[] cost, next, parent;
+    static int[] cost, next, visit;
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
         R  = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
         cost = new int[R*C];
         next = new int[R*C];
-        parent = new int[R*C];
-        boolean[] visit = new boolean[R*C];
+        visit = new int[R*C];
         for(int r=0;r<R;r++){
             String s = br.readLine();
             for(int c=0;c<C;c++){
@@ -31,7 +30,6 @@ public class Main {
                         next[r*C+c] = r<R-1?(r+1)*C+c:-1;
                         break;
                 }
-                parent[r*C+c] = r*C+c;
             }
         }
         for(int r=0;r<R;r++){
@@ -39,16 +37,16 @@ public class Main {
             for(int c=0;c<C;c++) cost[r*C+c] = Integer.parseInt(st.nextToken());
         }
         for(int i=R*C-1;i>=0;i--){
-            for(int now = i;!visit[now];now = next[now]){
-                visit[now] = true;
+            for(int now = i;visit[now]==0||visit[now]==i+1;now = next[now]){
+                visit[now] = i+1;
                 if(next[now]==-1) break;
-                if(parent[now]==parent[next[now]]){
+                if(visit[next[now]]==i+1){
                     int min = cost[now];
                     for(int s = next[now];s!=now;s=next[s]) min = Math.min(min,cost[s]);
                     ans += min;
                     break;
-                }
-                parent[next[now]] = parent[now];
+                }else if(visit[next[now]]!=0) break;
+                visit[next[now]] = i+1;
             }
         }
         bw.write(Integer.toString(ans));
