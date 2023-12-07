@@ -9,14 +9,14 @@ for _ in range(N):
     limit = max(limit, X)
 enemy.sort()
 weapon.sort()
-e, w = 0, 0
-while len(enemy) != e:
-    if D>limit:
+E, e, W, w = len(enemy), 0, len(weapon), 0
+while E != e:
+    if D > limit:
         ans = N
-        w = len(weapon)
+        w = W
         break
     if enemy[e] >= D:
-        if len(weapon) == w:
+        if w == W:
             break
         D *= weapon[w]
         w += 1
