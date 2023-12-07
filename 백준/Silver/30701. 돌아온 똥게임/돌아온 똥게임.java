@@ -6,18 +6,20 @@ public class Main {
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken()), ans = 0;
+        int N = Integer.parseInt(st.nextToken()), ans = 0, max = 0;
         long D = Integer.parseInt(st.nextToken());
         PriorityQueue<Integer> enemy = new PriorityQueue<>(), weapon = new PriorityQueue<>();
-        for(int i=0;i<N;i++){
+        for(int i=0,now;i<N;i++){
             st = new StringTokenizer(br.readLine());
-            if(Integer.parseInt(st.nextToken())==1) enemy.offer(Integer.parseInt(st.nextToken()));
+            if(Integer.parseInt(st.nextToken())==1){
+                max = Math.max(max,now = Integer.parseInt(st.nextToken()));
+                enemy.offer(now);
+            }
             else weapon.offer(Integer.parseInt(st.nextToken()));
         }
         while(!enemy.isEmpty()){
-            if(D>1_000_000_000){
-                ans = N;
-                weapon.clear();
+            if(D>max){
+                ans = N - weapon.size();
                 break;
             }
             if(enemy.peek()>=D){
@@ -29,8 +31,7 @@ public class Main {
             D += enemy.poll();
             ans++;
         }
-        ans += weapon.size();
-        bw.write(Integer.toString(ans));
+        bw.write(Integer.toString(ans+weapon.size()));
         bw.flush();
     }
 }
