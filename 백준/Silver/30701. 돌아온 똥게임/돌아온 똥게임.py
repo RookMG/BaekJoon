@@ -1,24 +1,27 @@
 import sys
-import heapq
 input = sys.stdin.readline
 N, D = map(int,input().split())
 ans, limit = 0, 0
 enemy, weapon = [], []
 for _ in range(N):
     A, X = map(int,input().split())
-    heapq.heappush(enemy if A==1 else weapon, X)
+    (enemy if A==1 else weapon).append(X)
     limit = max(limit, X)
-while len(enemy) != 0:
+enemy.sort()
+weapon.sort()
+e, w = 0, 0
+while len(enemy) != e:
     if D>limit:
-        ans = N - len(weapon)
+        ans = N
+        w = len(weapon)
         break
-    now = heapq.heappop(enemy)
-    if now >= D:
-        if len(weapon) == 0:
+    if enemy[e] >= D:
+        if len(weapon) == w:
             break
-        D *= heapq.heappop(weapon)
-        heapq.heappush(enemy, now)
+        D *= weapon[w]
+        w += 1
     else:
-        D += now
+        D += enemy[e]
+        e += 1
     ans += 1
-print(ans + len(weapon))
+print(ans + len(weapon) - w)
