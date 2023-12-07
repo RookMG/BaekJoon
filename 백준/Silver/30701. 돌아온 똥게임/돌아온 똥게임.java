@@ -15,6 +15,11 @@ public class Main {
             else weapon.offer(Integer.parseInt(st.nextToken()));
         }
         while(!enemy.isEmpty()){
+            if(D>1_000_000_000){
+                ans = N;
+                weapon.clear();
+                break;
+            }
             if(enemy.peek()>=D){
                 if(weapon.isEmpty()) break;
                 D *= weapon.poll();
