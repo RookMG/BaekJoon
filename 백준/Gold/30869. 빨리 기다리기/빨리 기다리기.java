@@ -48,8 +48,8 @@ public class Main {
             }
             for(int i=links[now.idx].size()-1;i>=0;i--){
                 Link l = links[now.idx].get(i);
-                if(now.k<K&&now.time%l.interval!=0&&visit[l.end]>=now.k+1) pq.offer(new Node(now.time+l.time,now.k+1,l.end));
-                if(visit[l.end]>=now.k) pq.offer(new Node(now.time+l.time+(now.time%l.interval==0?0:l.interval-now.time%l.interval),now.k,l.end));
+                if(now.k<K&&now.time%l.interval!=0&&visit[l.end]>now.k+1) pq.offer(new Node(now.time+l.time,now.k+1,l.end));
+                if(visit[l.end]>now.k) pq.offer(new Node(now.time+l.time+(now.time%l.interval==0?0:l.interval-now.time%l.interval),now.k,l.end));
             }
         }
         bw.write(Integer.toString(ans));
