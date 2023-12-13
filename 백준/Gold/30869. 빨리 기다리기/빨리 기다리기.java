@@ -35,7 +35,7 @@ public class Main {
             links[Integer.parseInt(st.nextToken())].add(new Link(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
         }
         PriorityQueue<Node> pq = new PriorityQueue<>();
-        for(Link l:links[1]) pq.offer(new Node(l.time,0,l.end));
+        pq.offer(new Node(0,0,1));
         int[] visit = new int[N+1];
         Arrays.fill(visit,K+1);
         for(;!pq.isEmpty();){
@@ -46,7 +46,8 @@ public class Main {
                 ans = now.time;
                 break;
             }
-            for(Link l:links[now.idx]){
+            for(int i=links[now.idx].size()-1;i>=0;i--){
+                Link l = links[now.idx].get(i);
                 if(now.k<K&&now.time%l.interval!=0&&visit[l.end]>=now.k+1) pq.offer(new Node(now.time+l.time,now.k+1,l.end));
                 if(visit[l.end]>=now.k) pq.offer(new Node(now.time+l.time+(now.time%l.interval==0?0:l.interval-now.time%l.interval),now.k,l.end));
             }
