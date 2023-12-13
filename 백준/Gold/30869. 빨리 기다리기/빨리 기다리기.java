@@ -27,7 +27,7 @@ public class Main {
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
         st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken()), K = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken()), K = Integer.parseInt(st.nextToken()), ans = -1;
         ArrayList<Link>[] links = new ArrayList[N+1];
         for(int i=1;i<=N;i++) links[i] = new ArrayList<>();
         for(int i=0;i<M;i++){
@@ -43,16 +43,15 @@ public class Main {
             if(visit[now.idx]<=now.k) continue;
             visit[now.idx] = now.k;
             if(now.idx==N){
-                bw.write(Integer.toString(now.time));
-                bw.flush();
-                return;
+                ans = now.time;
+                break;
             }
             for(Link l:links[now.idx]){
                 if(now.k<K&&now.time%l.interval!=0&&visit[l.end]>=now.k+1) pq.offer(new Node(now.time+l.time,now.k+1,l.end));
                 if(visit[l.end]>=now.k) pq.offer(new Node(now.time+l.time+(now.time%l.interval==0?0:l.interval-now.time%l.interval),now.k,l.end));
             }
         }
-        bw.write("-1");
+        bw.write(Integer.toString(ans));
         bw.flush();
     }
 }
