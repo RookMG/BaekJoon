@@ -16,7 +16,7 @@ public class Main {
             }
             if(now==0) break;
             visit[now] = true;
-            now = (int)((now*mul%K+N)%K);
+            now = (int)((now*mul+N)%K);
         }
         bw.write(Long.toString(ans));
         bw.flush();
