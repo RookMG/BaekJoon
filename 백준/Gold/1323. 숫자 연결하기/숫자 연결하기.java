@@ -9,15 +9,14 @@ public class Main {
         String s = st.nextToken();
         long N = Integer.parseInt(s), K = Integer.parseInt(st.nextToken()), mul = (long) Math.pow(10,s.length()), ans = 1;
         boolean[] visit = new boolean[(int)K];
-        for(long now = N;;ans++){
-            now %= K;
-            if(visit[(int)now]){
+        for(int now = (int)(N%K);;ans++){
+            if(visit[now]){
                 ans = -1;
                 break;
             }
             if(now==0) break;
-            visit[(int)now] = true;
-            now = now*mul+N;
+            visit[now] = true;
+            now = (int)((now*mul%K+N)%K);
         }
         bw.write(Long.toString(ans));
         bw.flush();
