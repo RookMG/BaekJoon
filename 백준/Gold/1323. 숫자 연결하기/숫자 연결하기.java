@@ -8,15 +8,15 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         String s = st.nextToken();
         long N = Integer.parseInt(s), K = Integer.parseInt(st.nextToken()), mul = (long) Math.pow(10,s.length()), ans = 1;
-        HashSet<Long> set = new HashSet<>();
+        boolean[] visit = new boolean[(int)K];
         for(long now = N;;ans++){
             now %= K;
-            if(set.contains(now)){
+            if(visit[(int)now]){
                 ans = -1;
                 break;
             }
             if(now==0) break;
-            set.add(now);
+            visit[(int)now] = true;
             now = now*mul+N;
         }
         bw.write(Long.toString(ans));
