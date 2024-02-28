@@ -6,19 +6,18 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
-        HashSet<String> unheard = new HashSet<>(), unseen = new HashSet<>();
-        ArrayList<String> list = new ArrayList<>();
+        HashSet<String> set = new HashSet<>();
+        ArrayList<String> ans = new ArrayList<>();
         st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken());
-        for(int i=0;i<N;i++) unheard.add(br.readLine());
+        for(int i=0;i<N;i++) set.add(br.readLine());
         for(int i=0;i<M;i++){
             String name = br.readLine();
-            if(!unheard.contains(name)) continue;
-            list.add(name);
+            if(set.contains(name)) ans.add(name);
         }
-        Collections.sort(list);
-        sb.append(list.size()).append("\n");
-        for(String name:list) sb.append(name).append("\n");
+        Collections.sort(ans);
+        sb.append(ans.size()).append("\n");
+        for(String name : ans) sb.append(name).append("\n");
         bw.write(sb.toString());
         bw.flush();
     }
