@@ -11,9 +11,9 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken());
         for(int i=0;i<N;i++) unheard.add(br.readLine());
-        for(int i=0;i<M;i++) unseen.add(br.readLine());
-        for(String name:unheard){
-            if(!unseen.contains(name)) continue;
+        for(int i=0;i<M;i++){
+            String name = br.readLine();
+            if(!unheard.contains(name)) continue;
             list.add(name);
         }
         Collections.sort(list);
