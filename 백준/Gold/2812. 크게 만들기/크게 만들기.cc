@@ -17,9 +17,8 @@ int main() {
             stack.pop_back();
             K--;
         }
-        stack.push_back(line[i]);
+        if(i+K<N) stack.push_back(line[i]);
     }
-    while (K-- > 0) stack.pop_back();
     while (!stack.empty()) {
         cout << stack.front();
         stack.pop_front();
