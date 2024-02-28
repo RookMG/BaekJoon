@@ -1,38 +1,25 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.StringTokenizer;
-
-public class Main{
-
-    public void solution() throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        StringTokenizer st = new StringTokenizer(br.readLine());
+import java.io.*;
+import java.util.*;
+public class Main {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static StringBuilder sb = new StringBuilder();
+    static StringTokenizer st;
+    public static void main(String[] args) throws Exception {
         HashSet<String> unheard = new HashSet<>(), unseen = new HashSet<>();
         ArrayList<String> list = new ArrayList<>();
-        int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
-        for(int i=0;i<n;i++){
-            unheard.add(br.readLine());
-        }
-        for(int i=0;i<m;i++){
-            unseen.add(br.readLine());
-        }
+        st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken()), M = Integer.parseInt(st.nextToken());
+        for(int i=0;i<N;i++) unheard.add(br.readLine());
+        for(int i=0;i<M;i++) unseen.add(br.readLine());
         for(String name:unheard){
-            if(unseen.contains(name)){
-                list.add(name);
-            }
+            if(!unseen.contains(name)) continue;
+            list.add(name);
         }
         Collections.sort(list);
         sb.append(list.size()).append("\n");
-        for(String name:list){
-            sb.append(name).append("\n");
-        }
-        System.out.print(sb);
-    }
-    public static void main(String[] args) throws Exception{
-        new Main().solution();
+        for(String name:list) sb.append(name).append("\n");
+        bw.write(sb.toString());
+        bw.flush();
     }
 }
