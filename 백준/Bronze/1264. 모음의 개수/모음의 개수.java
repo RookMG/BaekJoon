@@ -1,19 +1,16 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 public class Main {
-	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	public static void main(String[] args) throws Exception {
-		while(true){
-			char[] line = br.readLine().toCharArray();
-			if(line.length==1&&line[0]=='#') break;
-			int answer = 0;
-			for(char ch:line) if("AEIOUaeiou".indexOf(ch)>=0) answer++;
-			bw.write(Integer.toString(answer));
-			bw.write("\n");
-		}
-		bw.flush();
-	}
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args) throws Exception {
+        for(int ans=0;;ans=0){
+            char[] line = br.readLine().toCharArray();
+            if(line.length==1&&line[0]=='#') break;
+            for(char ch:line) if("AEIOUaeiou".indexOf(ch)>=0) ans++;
+            sb.append(ans).append('\n');
+        }
+        bw.write(sb.toString());
+        bw.flush();
+    }
 }
