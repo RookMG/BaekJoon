@@ -382,6 +382,7 @@
 |28091. 사각형 분할|[링크](./%EB%B0%B1%EC%A4%80/Diamond/28091.%E2%80%85%EC%82%AC%EA%B0%81%ED%98%95%E2%80%85%EB%B6%84%ED%95%A0/%EC%82%AC%EA%B0%81%ED%98%95%E2%80%85%EB%B6%84%ED%95%A0.java)|
 |28260. 초콜릿의 맛은 몇 점？|[링크](./%EB%B0%B1%EC%A4%80/Diamond/28260.%E2%80%85%EC%B4%88%EC%BD%9C%EB%A6%BF%EC%9D%98%E2%80%85%EB%A7%9B%EC%9D%80%E2%80%85%EB%AA%87%E2%80%85%EC%A0%90%EF%BC%9F/%EC%B4%88%EC%BD%9C%EB%A6%BF%EC%9D%98%E2%80%85%EB%A7%9B%EC%9D%80%E2%80%85%EB%AA%87%E2%80%85%EC%A0%90%EF%BC%9F.java)|
 |2899. 구슬 없애기|[링크](./%EB%B0%B1%EC%A4%80/Diamond/2899.%E2%80%85%EA%B5%AC%EC%8A%AC%E2%80%85%EC%97%86%EC%95%A0%EA%B8%B0/README.md)|
+|7501. Key|[링크](./%EB%B0%B1%EC%A4%80/Diamond/7501.%E2%80%85Key/README.md)|
 |8464. Non－Squarefree Numbers|[링크](./%EB%B0%B1%EC%A4%80/Diamond/8464.%E2%80%85Non%EF%BC%8DSquarefree%E2%80%85Numbers/README.md)|
 |9158. Super Star|[링크](./%EB%B0%B1%EC%A4%80/Diamond/9158.%E2%80%85Super%E2%80%85Star/README.md)|
 ### 🚀 Gold
