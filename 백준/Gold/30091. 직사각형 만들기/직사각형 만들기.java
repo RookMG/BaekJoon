@@ -11,15 +11,19 @@ public class Main {
         for(int i=0;i<N;i++) arr[i] = Integer.parseInt(st.nextToken());
         Arrays.sort(arr);
         HashMap<Integer,Long> map = new HashMap<>();
-        for(int i=0,j=0;i<N;i=j){
-            for(j=i;j<N&&arr[i]==arr[j];j++);
-            map.put(arr[i]<<1,map.getOrDefault(arr[i]<<1,0L)+1L*arr[i]*arr[i]*((j-i)>>1));
+        for(int s=0,sn;s<N;s=sn){
+            for(sn=s;sn<N&&arr[s]==arr[sn];sn++);
+            map.put(arr[s]*2,map.getOrDefault(arr[s]*2,0L)+1L*arr[s]*arr[s]*((sn-s)/2));
             boolean[] visit = new boolean[N];
-            for(int s=j,e;s<N;s=e){
-                for(e=s;e<N&&arr[s]==arr[e];e++);
-                for(;visit[s];s++);
-                visit[s] = true;
-                map.put(arr[i]+arr[s],map.getOrDefault(arr[i]+arr[s],0L)+1L*arr[i]*arr[s]);
+            for(;s<sn;s++) for(int e=sn,en;e<N;e=en){
+                for(en=e;en<N&&arr[e]==arr[en];en++);
+                for(;e<en;e++){
+                    if(visit[e]) continue;
+                    visit[e] = true;
+                    map.put(arr[s]+arr[e],map.getOrDefault(arr[s]+arr[e],0L)+1L*arr[s]*arr[e]);
+                    break;
+                }
+
             }
         }
         long ans = 0L;
