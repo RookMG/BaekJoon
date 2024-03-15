@@ -10,7 +10,7 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<N;i++) arr[i] = Integer.parseInt(st.nextToken());
         Arrays.sort(arr);
-        TreeMap<Integer,Long> map = new TreeMap<>();
+        HashMap<Integer,Long> map = new HashMap<>();
         for(int i=0,j=0;i<N;i=j){
             for(j=i;j<N&&arr[i]==arr[j];j++);
             map.put(arr[i]<<1,map.getOrDefault(arr[i]<<1,0L)+1L*arr[i]*arr[i]*((j-i)>>1));
