@@ -10,7 +10,7 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         long A = Long.parseLong(st.nextToken()), B = Long.parseLong(st.nextToken());
         for(long i=A;i<=B;i++){
-            if(BigInteger.valueOf(i).isProbablePrime(90) ||i==9){
+            if(BigInteger.valueOf(i).isProbablePrime(10) ||i==9){
                 sb.append(i).append(' ');
             }
         }
