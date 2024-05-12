@@ -33,6 +33,5 @@ int main() {
         }
         if (order == 4) --sum;
     }
-    for (int i = 0; i < 4; i++) if (sound[i] > 0) ans = -1;
-    printf("%d", ans);
+    printf("%d", sum==0?ans:-1);
 }
