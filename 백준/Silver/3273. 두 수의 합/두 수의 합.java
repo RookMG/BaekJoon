@@ -3,22 +3,14 @@ import java.util.*;
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static HashSet<Integer> set = new HashSet<>();
     static StringTokenizer st;
     public static void main(String[] args) throws Exception {
         int N = Integer.parseInt(br.readLine()), X, ans = 0;
-        int[] arr = new int[N];
         st = new StringTokenizer(br.readLine());
-        for(int i=0;i<N;i++) arr[i] = Integer.parseInt(st.nextToken());
-        Arrays.sort(arr);
+        for(int i=0;i<N;i++) set.add(Integer.parseInt(st.nextToken()));
         X = Integer.parseInt(br.readLine());
-        for(int l = 0, r = N - 1; l<r; ){
-            int cmp = Integer.compare(arr[l]+arr[r],X);
-            switch(cmp){
-                case 0: ans++;
-                case 1: r--;break;
-                case -1:l++;
-            }
-        }
+        for(int i=(X>>1) + 1;i<X;i++) if(set.contains(i)&&set.contains(X-i)) ans++;
         bw.write(Integer.toString(ans));
         bw.flush();
     }
