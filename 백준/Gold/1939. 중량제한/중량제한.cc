@@ -24,7 +24,7 @@ int main(){
         reverse(links[i].begin(),links[i].end());
     }
     cin >> S >> E;
-    pq.push({ 0,S });
+    pq.push({ 1'000'000'000,S });
     for (;!pq.empty();) {
         auto [d, now] = pq.top();
         pq.pop();
@@ -35,10 +35,6 @@ int main(){
         if (dist[now] > d) continue;
         for (auto el : links[now]) {
             auto [nd, next] = el;
-            if(d == 0){
-                pq.push({dist[next] = nd, next});
-                continue;
-            }
             if (dist[next] >= nd || dist[next] >= d) continue;
             pq.push({dist[next] = min(d,nd), next});
         }
