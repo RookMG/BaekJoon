@@ -24,7 +24,7 @@ int main(){
         reverse(links[i].begin(),links[i].end());
     }
     cin >> S >> E;
-    pq.push({ 1'000'000'000,S });
+    pq.push({ 1e9,S });
     for (;!pq.empty();) {
         auto [d, now] = pq.top();
         pq.pop();
